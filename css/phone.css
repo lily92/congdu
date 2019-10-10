@@ -17,11 +17,27 @@
   .w50 {
     width: 100%;
   }
+  .padding120 {
+    padding-top: 70px;
+  }
   .max640 {
     padding: 0 15px;
   }
+  #_banner .banner-txt1 {
+    font-size: 20px;
+  }
+  #_banner .banner-txt2 {
+    font-size: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  #_banner .banner-arrow {
+    bottom: 30%;
+    left: auto;
+    transform: translateX(0);
+  }
   #_about h2, #_menber h2 {
-    font-size: 30px;
+    font-size: 25px;
   }
   #_about .flex-about, #_menber .flex-about {
     margin-bottom: 20px;
@@ -41,7 +57,14 @@
     padding: 15px 0;
   }
   #_about .play-icon, #_menber .play-icon {
-    top: 25%;
+    top: 50%;
+  }
+  #_about .btn-group, #_menber .btn-group {
+    text-align: center;
+  }
+  #_item .paddingt65 {
+    padding-top: 65px;
+    height: 100%;
   }
   #_item .item {
     width: 50%;
@@ -49,35 +72,67 @@
   #_item .item-more {
     bottom: 20px;
     top: auto;
+    font-size: 13px;
   }
   #_item .item-title {
-    font-size: 25px;
+    font-size: 20px;
+  }
+  #_menber .icon {
+    width: 35px;
   }
   #_menber .padding40 {
     padding: 15px;
   }
   #_menber .cn {
-    font-size: 16px;
+    font-size: 14px;
   }
   #_menber .en {
-    font-size: 13px;
+    font-size: 12px;
   }
   #_menber .menber-flex li {
     padding: 5px 0;
+    width: 49%;
+  }
+  #_menber .marginauto {
+    margin: 20px auto;
+    display: block;
+  }
+  #_menber .menber-bg {
+    padding-top: 70px;
+  }
+  #_news {
+    padding-top: 70px;
   }
   #_news h2 {
     padding: 15px 0;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1;
   }
   #_news .btn-next-prev {
     padding: 5px 0;
   }
+  #_news .btn-next-prev a {
+    color: #fff;
+    border-color: #fff;
+  }
   #_news .title {
     font-size: 18px;
   }
+  #_news .new-desc {
+    padding: 10px;
+  }
+  #_news .margint10 {
+    margin-top: 10px;
+  }
+  #_news .btn-group a {
+    border-color: #fff;
+    color: #fff;
+  }
   footer {
     padding: 20px 0;
+  }
+  footer .contact {
+    flex-shrink: 0;
   }
   footer .link-box {
     width: 100%;
@@ -85,6 +140,16 @@
   footer .footer-flex {
     justify-content: space-between;
     flex-wrap: nowrap;
+  }
+  footer .f-title {
+    font-size: 16px;
+  }
+  footer .f-line p {
+    padding: 3px 0 3px 20px;
+    font-size: 12px;
+  }
+  footer .f-btn {
+    margin: 10px 0 0 0;
   }
   /*nav*/
   .header {

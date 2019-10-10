@@ -372,18 +372,20 @@ img {
   color: #fff;
   border-radius: 10px;
   border: 1px solid #fff;
-  position: absolute;
-  top: 70%;
-  left: 15px;
+}
+
+#_banner .banner-more:hover {
+  background: #0a5281;
+  color: #fff;
+  border: 1px solid #0a5281;
 }
 
 #_banner .banner-arrow {
   position: absolute;
   bottom: 50px;
-  left: 55%;
-  z-index: 3;
-  max-width: 1360px;
+  left: 50%;
   transform: translateX(-50%);
+  z-index: 3;
 }
 
 #_banner .banner-arrow .new-right {
@@ -399,6 +401,27 @@ img {
   background: #0a5281;
   color: #fff;
   border: 1px solid #0a5281;
+}
+
+#_banner .banner-txt {
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+#_banner .banner-txt1 {
+  font-size: 58px;
+}
+
+#_banner .banner-txt2 {
+  font-size: 76px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.margin-left20 {
+  margin-left: 20px;
 }
 
 #_about,
@@ -495,6 +518,13 @@ img {
   left: 50%;
   top: 40%;
   transform: translateX(-50%) translateY(-50%);
+  transition: .3s linear all;
+  cursor: pointer;
+}
+
+#_about .play-icon:hover,
+#_menber .play-icon:hover {
+  transform: translateX(-50%) translateY(-50%) scale(0.85);
 }
 
 #_about .fp-scrollable,
@@ -529,8 +559,8 @@ img {
   color: #fff;
 }
 
-.btn-group a:last-child {
-  margin-left: 20px;
+#_item .paddingt65 {
+  height: 100%;
 }
 
 #_item .item {
@@ -699,7 +729,6 @@ img {
   text-align: center;
   line-height: 36px;
   display: inline-block;
-  margin: 0 15px;
 }
 
 .new-left {
@@ -795,6 +824,10 @@ footer .footer-flex {
 
 footer .link-box {
   width: calc(100% - 400px);
+}
+
+#fp-nav {
+  z-index: 1;
 }
 
 #fp-nav ul li, .fp-slidesNav ul li {

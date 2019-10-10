@@ -303,17 +303,14 @@ img {
     color: $colorf;
     border-radius: 10px;
     border: 1px solid #fff;
-    position: absolute;
-    top: 70%;
-    left: 15px;
   }
+  .banner-more:hover{ background: $colorb; color:$colorf; border: 1px solid $colorb}
   .banner-arrow {
     position: absolute;
     bottom: 50px;
-    left: 55%;
-    z-index: 3;
-    max-width: 1360px;
+    left:50%;
     transform: translateX(-50%);
+    z-index: 3;
     .new-right {
       border-color: $colorf;
       color: $colorf;
@@ -327,7 +324,11 @@ img {
     color: $colorf;
     border: 1px solid $colorb;
   }
+  .banner-txt{ align-items: center; justify-content: flex-start; color: $colorf}
+  .banner-txt1{ font-size: 58px;}
+  .banner-txt2{ font-size: 76px; border-bottom: 1px solid $colorf; padding-bottom: 60px; margin-bottom: 60px;}
 }
+.margin-left20{ margin-left: 20px;}
 #_about,
 #_menber {
   align-items: center;
@@ -384,8 +385,9 @@ img {
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); transition: .3s linear all; cursor: pointer;
   }
+  .play-icon:hover{transform: translateX(-50%) translateY(-50%) scale(0.85); }
   .fp-scrollable{ width: 100%}
   .fp-scroller{ display: flex; width: 100%; flex-wrap: wrap}
 }
@@ -409,10 +411,11 @@ img {
     background: $colorb;
     color: $colorf;
   }
-  a:last-child{ margin-left: 20px;}
+  // a:last-child{ margin-left: 20px;}
 }
 
 #_item {
+  .paddingt65{ height: 100%;}
   .item {
     width: 25%;
   }
@@ -551,7 +554,7 @@ img {
   text-align: center;
   line-height: 36px;
   display: inline-block;
-  margin: 0 15px;
+  // margin: 0 15px;
 }
 .new-left {
   transform: rotate(-180deg);
@@ -629,6 +632,7 @@ footer {
   }
 }
 
+#fp-nav{ z-index: 1;}
 #fp-nav ul li, .fp-slidesNav ul li{ height: 20px;}
 #fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 20px ; border-radius: 0; background: #c0a88c}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px;  height: 20px;  margin: 0 0 0 -2px;  border-radius: 0; background: $colorb}

@@ -6,38 +6,62 @@ $colorb: #0a5281;
     .fon16{ font-size: 13px;}
     .fon14{ font-size:12px;}
     .w50{ width: 100%}
-
+    .padding120{ padding-top: 70px;}
     .max640{  padding: 0 15px;}
+    #_banner{
+      .banner-txt1{ font-size:20px;}
+      .banner-txt2{ font-size: 25px; padding-bottom: 20px; margin-bottom: 20px;}
+      .banner-arrow{ bottom: 30%; left: auto; transform: translateX(0);}
+    }
+    
     #_about, #_menber{
-        h2{ font-size: 30px;}
+        h2{ font-size: 25px;}
        .flex-about{ margin-bottom:20px;}
        .about-video{ padding:  15px 15px }
        .play-icon{ width: 50px;}
        .about-video-text{ position: static; width: 100%; padding: 15px }
        .about-desc{ padding: 15px 0;}
-       .play-icon{ top: 25%}
+       .play-icon{ top: 50%}
+       .btn-group{ text-align: center}
+
     }
     
-    #_item {
+    #_item{
+        .paddingt65{ padding-top: 65px; height: 100%;}
         .item{ width: 50%}
-        .item-more{ bottom: 20px; top: auto;}
-        .item-title{ font-size: 25px;}
+        .item-more{ bottom: 20px; top: auto; font-size: 13px}
+        .item-title{ font-size: 20px;}
     }
+   
     #_menber {
+      .icon{ width: 35px;}
     .padding40{ padding: 15px;}
-    .cn{ font-size: 16px}
-    .en{ font-size: 13px}
-    .menber-flex li{ padding: 5px 0;}
+    .cn{ font-size: 14px}
+    .en{ font-size: 12px}
+    .menber-flex li{ padding: 5px 0; width: 49%}
+    .marginauto{ margin: 20px auto; display: block;}
+    .menber-bg{ padding-top: 70px;}
   }
   #_news {
-    h2{ padding: 15px 0; font-size: 30px; line-height: 1}
-    .btn-next-prev{ padding: 5px 0;}
+    padding-top: 70px;
+    h2{ padding: 15px 0; font-size: 25px; line-height: 1}
+    .btn-next-prev{ padding: 5px 0;
+     a{ color: #fff; border-color: #fff;}
+    }
     .title{ font-size: 18px}
+    .new-desc{ padding: 10px;}
+    .margint10{ margin-top: 10px;}
+    .btn-group a{ border-color: #fff;  color: #fff;}
+    
   }
   footer{
       padding: 20px 0;
+      .contact{ flex-shrink: 0;}
     .link-box{ width: 100%}
     .footer-flex{ justify-content: space-between; flex-wrap: nowrap;}
+   .f-title{ font-size: 16px;}
+   .f-line p{ padding: 3px 0 3px 20px; font-size: 12px;}
+   .f-btn{ margin: 10px 0 0 0}
   }
 
 /*nav*/
