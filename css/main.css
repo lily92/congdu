@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body { overflow-x: hidden; overflow-y: scroll; width: 100%; color: #333; font-size: 14px; line-height: 1.5; font-family: "Microsoft Yahei", Tahoma; }
+body { overflow-x: hidden !important; overflow-y: scroll; width: 100%; color: #333; font-size: 14px; line-height: 1.5; font-family: "Microsoft Yahei", Tahoma; }
 
 body, dd, dl, dt, form, h1, h2, h3, h4, h5, li, ol, p, ul { margin: 0; padding: 0; }
 
@@ -404,13 +404,13 @@ footer .link-box { width: calc(100% - 400px); }
 
 .new-list1 .new-con { width: 56.4%; padding-left: 3.9%; border: 1px solid #eee; align-items: center; padding-right: 2.3%; }
 
-.new-list1 .new-con h4 { font-size: 25px; font-weight: normal; }
+.new-list1 .new-con h4 { font-size: 25px; font-weight: normal; padding-top: 5px; }
 
 .new-list1 .date { color: #c1a367; padding: 20px 0; border-bottom: 1px solid #e1eaf0; margin-bottom: 20px; }
 
 .new-list1 .news-desc { color: #78848b; margin-bottom: 20px; }
 
-.new-list1 .new-more { display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: #fff; background: #0a5281; }
+.new-list1 .new-more { display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: #fff; background: #0a5281; margin-bottom: 5px; }
 
 /*team*/
 .far { font-family: Arial, Helvetica, sans-serif; }
@@ -439,6 +439,50 @@ footer .link-box { width: calc(100% - 400px); }
 
 .team-list2 .p8 { transform: scale(0.7); }
 
+.menber-list { display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+.menber-list li { width: 20.01%; text-align: center; margin-top: 76px; position: relative; background: #fff; }
+
+.menber-list li::after { position: absolute; display: block; content: ''; width: 15px; height: 24px; background: url(../images/line-sanjiao.png); right: -22%; top: 50%; transform: translateY(-50%); }
+
+.menber-list li::before { display: block; content: ''; width: 130%; left: 0; height: 1px; border-bottom: 1px dashed #0a5281; top: 50%; transform: translateY(-50%); position: absolute; z-index: 1; }
+
+.menber-list .number { font-size: 34px; color: #aa8c6c; }
+
+.menber-list .menber-tit { color: #39444a; font-size: 19px; }
+
+.menber-list .dot { position: relative; background: #fff; z-index: 1; }
+
+.menber-list .positionb { z-index: 2; }
+
+.menber-list li:nth-child(4n)::after, .menber-list li:nth-child(4n)::before { display: none; }
+
+.menber-item { background: #fbfbfb; }
+
+.menber-item .slider { visibility: hidden; }
+
+.menber-item .main-con { background: #fbfbfb; border-left: 1px solid #0a5281; padding-top: 0; padding-bottom: 0; margin-top: 60px; margin-bottom: 60px; }
+
+.menber-item h1 { font-weight: normal; position: relative; }
+
+.menber-item .dots { position: absolute; width: 125px; height: 125px; border-radius: 50%; background: #0a5281; color: #fff; left: -155px; top: -100%; }
+
+.menber-item .dots .num { font-size: 40px; }
+
+.menber-item .dots .eng { font-size: 16px; text-transform: uppercase; }
+
+.menber-item .lines { padding: 30px 0 0 0; height: 1px; border-bottom: 1px solid #0a5281; margin-bottom: 30px; }
+
+.menber-item .margint { margin-top: 30px; }
+
+.menber-item .fon25 { font-size: 25px; }
+
+.noshodow { box-shadow: none !important; }
+
+.margin-t { margin-top: 200px !important; }
+
+.margin-b60 { margin-bottom: 180px; }
+
 /*end 内页*/
 @media (min-width: 768px) { .header nav li { padding: 0 3px; font-size: 15px; } }
 
@@ -456,6 +500,9 @@ footer .link-box { width: calc(100% - 400px); }
   .new-list1 .date { padding: 10px 0; margin-bottom: 10px; }
   .new-list1 .news-desc { margin-bottom: 10px; } }
 
+@media (max-width: 1024px) { .menber-list .number { font-size: 25px; }
+  .menber-list .menber-tit { font-size: 13px; } }
+
 @media (max-width: 991px) { .fon30 { font-size: 25px; }
   .fon20 { font-size: 16px; }
   .margin-b40 { margin-bottom: 20px; }
@@ -465,4 +512,9 @@ footer .link-box { width: calc(100% - 400px); }
   .ny-container .slider .slider-list li a { padding: 15px 15px 15px 25px; }
   .ny-container .main-con { padding: 30px 45px; }
   .ny-container .main-con h3 { font-size: 28px; }
-  .ny-container .main-con .menu { padding-bottom: 10px; margin-bottom: 10px; } }
+  .ny-container .main-con .menu { padding-bottom: 10px; margin-bottom: 10px; }
+  .menber-item .ny-container .main-con { padding-left: 90px; }
+  .menber-list li { width: 47%; }
+  .menber-list li:nth-child(4n)::after, .menber-list li:nth-child(4n)::before { display: block; }
+  .menber-list li:nth-child(2n)::after, .menber-list li:nth-child(2n)::before { display: none; }
+  .menber-list li::after { right: -10%; } }

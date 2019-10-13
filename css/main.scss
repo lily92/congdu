@@ -6,7 +6,7 @@ $color0: #000;
 $colorb: #0a5281;
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   overflow-y: scroll;
   width: 100%;
   color: $color3;
@@ -718,11 +718,11 @@ footer {
   li{ justify-content: space-between; margin-top: 60px;}
   .new-img{ width: 43.6%; background: #eee;}
   .new-con{ width: 56.4%; padding-left: 3.9%; border: 1px solid #eee; align-items: center; padding-right: 2.3%;
-   h4{ font-size: 25px; font-weight: normal;}
+   h4{ font-size: 25px; font-weight: normal; padding-top: 5px}
   }
   .date{ color: #c1a367; padding: 20px 0; border-bottom: 1px solid #e1eaf0; margin-bottom: 20px;}
   .news-desc{ color: #78848b; margin-bottom: 20px;}
-  .new-more{ display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: $colorf; background: $colorb;;} 
+  .new-more{ display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: $colorf; background: $colorb; margin-bottom: 5px} 
 }
 /*team*/
 .far{ font-family: Arial, Helvetica, sans-serif}
@@ -742,6 +742,34 @@ footer {
   .name::after{ position: absolute; left: 50%; bottom: 0; width: 90px; height: 1px; background: $colorf; content: ''; transform: translateX(-50%); display: block;}
   .p8{ transform: scale(0.7)}
 }
+.menber-list{
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  li{ width:20.01%; text-align: center; margin-top: 76px; position: relative;  background: $colorf}
+  li::after{ position: absolute; display: block; content: ''; width: 15px ; height: 24px; background: url(../images/line-sanjiao.png); right: -22%; top: 50%; transform: translateY(-50%)}
+  li::before{ display: block; content: ''; width: 130%; left: 0; height: 1px; border-bottom: 1px dashed $colorb; top: 50%; transform: translateY(-50%); position: absolute; z-index: 1;}
+  .number{ font-size: 34px; color: #aa8c6c}
+  .menber-tit{ color: #39444a; font-size: 19px;}
+  .dot{ position: relative;  background: $colorf; z-index: 1;}
+  .positionb{ z-index: 2;}
+  li:nth-child(4n)::after,li:nth-child(4n)::before{ display: none}
+}
+.menber-item{ background: #fbfbfb;
+ .slider{ visibility: hidden;}
+ .main-con{ background: #fbfbfb; border-left: 1px solid $colorb; padding-top: 0; padding-bottom: 0; margin-top: 60px; margin-bottom: 60px} 
+ h1{ font-weight: normal; position: relative;}
+ .dots{ position: absolute; width: 125px; height: 125px; border-radius: 50%; background: $colorb; color: $colorf;  left: -155px; top: -100%;
+  .num{ font-size: 40px}
+  .eng{ font-size: 16px; text-transform: uppercase}
+}
+.lines{ padding: 30px 0 0 0; height: 1px; border-bottom: 1px solid $colorb;margin-bottom: 30px;}
+.margint{ margin-top: 30px}
+.fon25{ font-size: 25px}
+}
+.noshodow{ box-shadow: none !important; }
+.margin-t{ margin-top: 200px !important}
+.margin-b60{ margin-bottom: 180px}
+
+
 
 /*end 内页*/ 
 @media (min-width: 768px) {
@@ -787,6 +815,10 @@ footer {
     .news-desc{ margin-bottom: 10px;}
   }
 }
+@media (max-width:1024px){
+  .menber-list .number{ font-size: 25px}
+  .menber-list .menber-tit{ font-size: 13px}
+}
 
 @media (max-width: 991px) {
   .fon30{ font-size: 25px;}
@@ -803,4 +835,16 @@ footer {
       .menu{  padding-bottom: 10px; margin-bottom: 10px;}
     }
   }
+  .menber-item{
+    .ny-container .main-con{ padding-left: 90px;}
+  }
+
+  .menber-list li{
+     width: 47%;
+  }
+  .menber-list{
+    li:nth-child(4n)::after,li:nth-child(4n)::before{ display: block}
+    li:nth-child(2n)::after,li:nth-child(2n)::before{ display: none}
+  }
+  .menber-list li::after{ right: -10%;}
 }

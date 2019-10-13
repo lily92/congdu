@@ -213,6 +213,7 @@ $colorb: #0a5281;
    flex-wrap: wrap; margin-top: 0;
   .slider{  padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1);
     h2{ font-size: 23px;}
+    h3::before { display: none}
     .slider-list{ width: 100%; overflow-x: auto; overflow-y: hidden; display: flex;}
     .slider-list li{ display: inline-block; flex-shrink: 0;}
     .slider-list li a{ padding:10px 15px 10px 25px; margin-left: 5px;}
@@ -220,7 +221,7 @@ $colorb: #0a5281;
     .slider-list li.active dl{ display: none;}
     
   }
-  .main-con{ padding: 25px 30px; width: 100%; margin-top: 20px;;
+  .main-con{ padding: 20px 15px; width: 100%; margin-top: 20px;;
     h3{ font-size: 25px;}
     .menu{  padding-bottom: 10px; margin-bottom: 10px; }
   }
@@ -240,6 +241,16 @@ $colorb: #0a5281;
   .date{  padding: 10px 0;  margin-bottom: 10px;}
   .news-desc{ margin-bottom: 10px;}
 }
-
+.menber-item{
+  .ny-container{ margin-left: 70px}
+}
+.margin-t{ margin-top: 60px !important}
+.menber-item {
+  .dots{ width: 80px; height: 80px; left: -86%; top: -50%}
+  .dots .num{ font-size: 20px}
+  .margin-b60{ margin-bottom: 100px}
+  .dots .eng{ font-size: 12px}
+  
+}
    
 }
