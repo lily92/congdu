@@ -26,87 +26,7 @@
 </head>
 
 <body>
-    <header class="header flex trans " id="header">
-        <div class="container flex header-top">
-            <a href="" class="logo">
-                <img src="images/logo.png" alt="" srcset="" class="logo1">
-                <img src="images/logo-hover.png" alt="" srcset="" class="logo2">
-            </a>
-            <div class="nav-right flex hidden-xs">
-                <nav>
-                    <ul class="flex ">
-                        <li><a href="">首页</a></li>
-                        <li><a href="">关于我们</a></li>
-                        <li><a href="">健康管理</a></li>
-                        <li><a href="">会员专享</a></li>
-                        <li><a href="">新闻资讯</a></li>
-                        <li><a href="">联系我们</a></li>
-                    </ul>
-                </nav>
-                <form>
-
-                    <input type="text" placeholder="搜索" class="search-txt">
-                </form>
-                <div class="lang ">
-                    <a href="">中</a> /
-                    <a href="">EN</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- mobile nav -->
-    <div class="nav-btn visible-xs">
-        <div class="hamburger" id="nav-btn">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-    </div>
-    <div class="nav-mobile visible-xs trans">
-        <ul>
-            <li>
-                <div class="nav-top">
-                    <a href="index.html">首页</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-top">
-                    <a href="about.html">关于我们</a>
-                </div>
-
-            </li>
-            <li>
-                <div class="nav-top">
-                    <a href="top.html">健康管理</a>
-                </div>
-
-            </li>
-            <li>
-                <div class="nav-top">
-                    <a href="class.html">会员专享</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-top">
-                    <a href="travel-list.html">新闻资讯</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-top">
-                    <a href="shop.html">联系我们</a>
-                </div>
-            </li>
-
-        </ul>
-        <form class="search-form flex trans phone-search ">
-            <div class="flex flex-center flex-nowarp">
-                <input type="button" value="搜索" class="btn-search" />
-                <!-- <span class="search-line color9">|</span> -->
-            </div>
-            <input type="text" placeholder="搜索" class="search-txt">
-            <span class="search-close">×</span>
-        </form>
-    </div>
+   <div class="head"></div>
 
     <!--container-->
     <div id="fullpage">
@@ -129,15 +49,15 @@
 
                         <!-- 移动端banner -->
                         <div class="visible-xs wh100"
-                        style='background:url(images/phone-banner.jpg) no-repeat center; background-size: cover;'>
-                        <div class="container positionr h100 flex  banner-txt">
-                            <div>
-                                <p class="banner-txt1">欢迎来到</p>
-                                <p class="banner-txt2">从都生命健康管理</p>
-                                <p><a href="" class="banner-more trans">探索更多 > </a></p>
+                            style='background:url(images/phone-banner.jpg) no-repeat center; background-size: cover;'>
+                            <div class="container positionr h100 flex  banner-txt">
+                                <div>
+                                    <p class="banner-txt1">欢迎来到</p>
+                                    <p class="banner-txt2">从都生命健康管理</p>
+                                    <p><a href="" class="banner-more trans">探索更多 > </a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                     <div class="swiper-slide ">
                         <!-- PC端banner  -->
@@ -154,15 +74,15 @@
 
                         <!-- 移动端banner -->
                         <div class="visible-xs wh100"
-                        style='background:url(images/phone-banner.jpg) no-repeat center; background-size: cover;'>
-                        <div class="container positionr h100 flex  banner-txt">
-                            <div>
-                                <p class="banner-txt1">欢迎来到</p>
-                                <p class="banner-txt2">从都生命健康管理</p>
-                                <p><a href="" class="banner-more trans">探索更多 > </a></p>
+                            style='background:url(images/phone-banner.jpg) no-repeat center; background-size: cover;'>
+                            <div class="container positionr h100 flex  banner-txt">
+                                <div>
+                                    <p class="banner-txt1">欢迎来到</p>
+                                    <p class="banner-txt2">从都生命健康管理</p>
+                                    <p><a href="" class="banner-more trans">探索更多 > </a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <div class="btn-next-prev   banner-arrow  container">
@@ -217,7 +137,7 @@
                     </div>
                 </div>
                 <div class="w50 about-video">
-                    <div class="text-right positionr">
+                    <div class=" positionr">
                         <img src="images/index-about-img.jpg" alt="" srcset="" class="visible-hidden">
                         <div class="about-video-bg hidden-xs">
                         </div>
@@ -227,10 +147,25 @@
                                 poster="images/index-about-img.jpg" /> -->
                         </div>
                         <div class="about-video-text  hidden-xs">
-                            <div>
-                                “从都国际生命健康管理中心世界一流的技术、世界一流的服务都令我印象深刻。”
-                                ——联合国前秘书长潘基文
+                            <div class="swiper-container video-desc-box">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p class="fon14 text-left">“从都国际生命健康管理中心世界一流的技术、世界一流的服务都令我印象深刻。”</p>
+                                        <p class="text-right"><b>——联合国前秘书长潘基文</b></p>
+                                        <hr class="hr">
+                                        <div>
+                                            <p>“这里的一切是如此的引人入胜，所有的设施都是极美的，这里的科技也是世界
+                                                最新前沿的！”</p>
+                                            <p class="text-right"><b> ——世界领袖联盟主席、拉脱维亚共和国前总统瓦伊拉·弗赖贝加</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-scrollbar"></div>
+
                             </div>
+
+
+
                         </div>
                         <img src="images/icon-player.png" alt="" srcset="" class="play-icon">
 
@@ -475,103 +410,14 @@
 
                 </div>
             </div>
-            <footer class="footer">
-                <div class="container flex footer-flex">
-                    <div class="contact">
-                        <p class="f-title">联系我们</p>
-                        <div class="f-line">
-                            <p class="f-icon1">86 20 8787 0001</p>
-                            <p class="f-icon2">中国广州市从化区从都大道1号</p>
-                            <p class="f-icon3">CONGDU4001811933</p>
-                        </div>
-                        <div>
-                            <a class="f-btn"><span>生命健康 由此开启</span></a>
-                        </div>
-                    </div>
-                    <div class="link-box hidden-xs">
-                        <ul class="link flex">
-                            <li>
-                                <div class="positionr">
-                                    <img src="images/f-logo1.png" alt="" srcset="" class="visible-hidden">
-                                    <div class="positionb">
-                                        <img src="images/f-logo1.png" alt="" srcset="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="positionr">
-                                    <img src="images/f-logo1.png" alt="" srcset="" class="visible-hidden">
-                                    <div class="positionb">
-                                        <img src="images/f-logo2.png" alt="" srcset="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="positionr">
-                                    <img src="images/f-logo1.png" alt="" srcset="" class="visible-hidden">
-                                    <div class="positionb">
-                                        <img src="images/f-logo3.png" alt="" srcset="">
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="positionr">
-                                    <img src="images/f-logo1.png" alt="" srcset="" class="visible-hidden">
-                                    <div class="positionb">
-                                        <img src="images/f-logo4.png" alt="" srcset="">
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="f-code">
-                        <img src="images/f-code.png" alt="" srcset="">
-                        <p class="f-code-p">www.imperialspringshealth.com</p>
-                    </div>
-                </div>
-            </footer>
-            <script>
-                var swiper = new Swiper('.news-box', {
-                    slidesPerView: 3,
-                    spaceBetween: 25,
-                    centeredSlides: true,
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '#new-next',
-                        prevEl: '#new-prev',
-                    },
-                    breakpoints: {
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 20,
-                        },
-                        768: {
-                            slidesPerView: 4,
-                            spaceBetween: 20,
-                        },
-                        1024: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                    }
-                });
-            </script>
-
+            <div class="footers"></div>
+         
 
         </div>
         <!-- end news -->
 
     </div>
-
-
-    <!-- <script type="text/javascript" src="examples.js"></script> -->
-
     <script type="text/javascript">
-
         $(function () {
             var myFullpage = new fullpage('#fullpage', {
                 fixedElements: '#header',
@@ -604,9 +450,47 @@
                     prevEl: '#banner_prev',
                 },
             });
+            var swiper_about = new Swiper('.video-desc-box', {
+                direction: 'vertical',
+                slidesPerView: 'auto',
+                freeMode: true,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                mousewheel: true,
+            });
+            var swiper_news = new Swiper('.news-box', {
+                slidesPerView: 3,
+                spaceBetween: 25,
+                centeredSlides: true,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '#new-next',
+                    prevEl: '#new-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                }
+            });
         });
 
     </script>
+
     <!--end container-->
 
 

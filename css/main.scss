@@ -13,7 +13,6 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-family: "Microsoft Yahei", Tahoma;
-  -webkit-text-size-adjust:none;
 }
 body,
 dd,
@@ -161,7 +160,7 @@ img {
   top: 0;
   width: 100%;
   height: 123px;
-  z-index: 2;
+  z-index:3;
   border-bottom: 1px solid #e4f0fd;
   color: $colorf;
   form {
@@ -238,7 +237,7 @@ img {
   }
 }
 .header:hover,
-.header.active {
+.header.active,.headactive .header {
   background: rgba($color: #fff, $alpha: 0.88);
   color: $colorb;
   a {
@@ -267,6 +266,7 @@ img {
     color: $colorb;
   }
 }
+.headactive .header{ box-shadow: 0 3px 6px rgba($color: #000, $alpha: 0.1);}
 
 /*index*/
 .padding120 {
@@ -366,9 +366,9 @@ img {
     width: 95%;
     bottom: 0;
     right: 15%;
-    height: 264px;
+    height: 48%;
     background: rgba(66, 119, 157, 0.78);
-    padding: 40px;
+    padding: 40px 10px 40px 40px;
     color: $colorf;
   }
   .about-video-bg {
@@ -376,9 +376,10 @@ img {
     width: 95%;
     bottom: -30px;
     left: -15%;
-    height: 216px;
+    height: 45%;
     background: #b99f84;
   }
+  .hr{ color: #799db8;}
   .index-video {
     width: 100%;
   }
@@ -391,6 +392,21 @@ img {
   .play-icon:hover{transform: translateX(-50%) translateY(-50%) scale(0.85); }
   .fp-scrollable{ width: 100%}
   .fp-scroller{ display: flex; width: 100%; flex-wrap: wrap}
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    height: auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 30px 0 0 ;
+  }
+  .swiper-scrollbar-drag{ background: rgba(255, 255, 255, 1); width: 200%; left: -50%;}
+  .swiper-scrollbar{ background: rgba(255, 255, 255, 0.6);}
+  .swiper-container-vertical>.swiper-scrollbar{ width: 2px;}
+  
+
 }
 
 #_about.active {
@@ -608,9 +624,9 @@ footer {
   }
   .link {
     margin: 0 auto;
-    justify-content: center;
+    justify-content: center; text-align: center;
     li {
-      border-right: 2px solid $colorf;
+      border-right: 2px solid $colorf; width: 25%;
     }
     li:last-child {
       border-right: 0;
@@ -637,6 +653,81 @@ footer {
 #fp-nav ul li, .fp-slidesNav ul li{ height: 20px;}
 #fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 20px ; border-radius: 0; background: #c0a88c}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px;  height: 20px;  margin: 0 0 0 -2px;  border-radius: 0; background: $colorb}
+
+/*内页*/
+/*about*/
+.fon30{ font-size: 30px;}
+.color45{ color: #45525a;}
+.margin-b40{ margin-bottom: 40px;}
+.ny-container{
+  margin: -125px auto 0; position: relative; display: flex; align-items: flex-start;
+  .slider{ width: 270px;box-shadow: 0 0 5px -1px rgba($color: #000, $alpha: 0.2); padding: 50px 0 50px 50px;  background: $colorf; margin-top: 40px;}
+  h2{ font-size: 25px; border-bottom: 1px solid #ede7e0; font-weight: normal; color: $colorb; padding-bottom: 15px;}
+  .slider-list{
+    li{
+      a{ padding: 20px 0; color: #b09476;  display: block; position: relative; padding-left: 25px; border-bottom: 1px solid #ede7e0; transition: .3s linear all; }
+      dl{ display: none;}
+      
+      a::before{ width: 3px; height: 20px; display: block; content: ''; position: absolute; left: 15px; background: #b09476;}
+      a.first:hover,a.first.cur{ background: #0c5281; color: $colorf;}
+      a.first:hover::before,a.first.cur::before{  background: $colorf;}
+      .is-submenu{ background: url(../images/s-iconup.png) no-repeat right center; padding-right: 20px;}
+      dl a{margin-left: 26px; padding-left: 15px; font-size: 14px; color: $colorb; font-weight: bold;}
+      dd a{ font-weight: normal;}
+      dt a::before{ width:11px; height: 3px; background: $colorb; top: 50%; transform: translateY(-50%); left: 0;}
+      dd a::before{ display: none;}
+    }
+    li.active{
+      dl{ display: block;}
+    }
+  }
+  .main-con{ width:calc(100% - 70px); box-shadow: 0 0 5px -1px  rgba($color: #000, $alpha: 0.2) ; background: $colorf;padding: 60px 90px 120px 90px;
+     h3{ font-size: 37px; color:#39444a; font-weight: normal; position: relative;}
+     h3::before{ display: block; content: '';  width: 12px; height: 4px; background:#39444a ;left: -20px;  position: absolute; top: 50%; transform: translateY(-50%);}
+     .menu{ font-size: 12px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px;}
+  
+  }
+  .main-con-news{ padding-left: 23px; padding-right: 23px;
+   h3::before{ display: none;}
+  }
+  .marginl40{padding-left: 30px;}
+}
+
+/*健康管理-整合干预*/ 
+.colorb{ color: $colorb;}
+.line5 p{ margin-bottom: 10px;}
+.ganyu-item{
+  background: #fbfbfb; padding: 25px 0 50px;
+  .item-padding270{ padding-left: 270px;}
+  h3{ font-size: 25px; margin-top: 25px; margin-bottom: 25px;}
+  .pading60{ padding:  0 60px;}
+  .p-dot{ position: relative; padding-left: 15px;}
+  .p-dot::after{ position: absolute; left: 0; top: 12px; display: block; content: ''; width: 7px; height: 7px; border-radius: 50%; background: $colorb;}
+}
+.ganyu-item2{ background: #fff; box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.2);}
+
+.main-con-news{
+  .new-date-list{ width: 100%; padding-top: 25px; text-align: center;
+   li{ display: inline-block; width: 90px; height: 28px; text-align: center; line-height: 28px; margin: 0 25px; font-size: 13px; color: $colorb; transition: .3s linear all;}
+   li:hover ,li.cur{ background: url(../images/dete-bg.png) no-repeat center;}
+   li:hover a ,li.cur a{ color: $colorf;}
+  }
+}
+
+.new-list1{
+  li{ justify-content: space-between; margin-top: 60px;}
+  .new-img{ width: 43.6%; background: #eee;}
+  .new-con{ width: 56.4%; padding-left: 3.9%; border: 1px solid #eee; align-items: center; padding-right: 2.3%;
+   h4{ font-size: 25px; font-weight: normal;}
+  }
+  .date{ color: #c1a367; padding: 20px 0; border-bottom: 1px solid #e1eaf0; margin-bottom: 20px;}
+  .news-desc{ color: #78848b; margin-bottom: 20px;}
+  .new-more{ display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: $colorf; background: $colorb;;} 
+}
+
+
+
+/*end 内页*/ 
 @media (min-width: 768px) {
   .header {
     nav li {
@@ -658,7 +749,7 @@ footer {
 @media (min-width: 1200px) {
   .header {
     nav li {
-      padding: 0 20px;
+      padding: 0 24px;
       font-size: 20px;
     }
   }
@@ -666,4 +757,34 @@ footer {
 
 @media (max-width: 1440px) {
   .max640{ padding-left: 40px;}
+}
+
+@media (max-width:1200px) {
+  .ganyu-item .item-padding270{ padding-left: 0;}
+  .new-list1{
+    li{ margin-top: 30px;}
+    .new-img{ width: 43.6%; background: #eee;}
+    .new-con{ width: 56.4%; padding-left: 3.9%; padding-right: 2.3%; padding-top: 10px; padding-bottom: 10px;
+     h4{ font-size: 20px; font-weight: normal;}
+    }
+    .date{  padding: 10px 0;  margin-bottom: 10px;}
+    .news-desc{ margin-bottom: 10px;}
+  }
+}
+
+@media (max-width: 991px) {
+  .fon30{ font-size: 25px;}
+  .fon20{ font-size: 16px;}
+  .margin-b40{ margin-bottom: 20px;}
+  /*内页*/ 
+  .ny-container{
+    .slider{  padding: 25px 0 25px 25px;
+      h2{ font-size: 23px;}
+      .slider-list li a{ padding: 15px 15px 15px 25px;}
+    }
+    .main-con{ padding: 30px 45px;
+      h3{ font-size: 28px;}
+      .menu{  padding-bottom: 10px; margin-bottom: 10px;}
+    }
+  }
 }

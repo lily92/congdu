@@ -37,7 +37,7 @@ $colorb: #0a5281;
       .icon{ width: 35px;}
     .padding40{ padding: 15px;}
     .cn{ font-size: 14px}
-    .en{ font-size: 12px; white-space: nowrap;}
+    .en{ font-size: 12px}
     .menber-flex li{ padding: 5px 0; width: 49%}
     .marginauto{ margin: 20px auto; display: block;}
     .menber-bg{ padding-top: 70px;}
@@ -203,6 +203,43 @@ $colorb: #0a5281;
   .search-close{ line-height: 30px; color: #fff; font-size: 20px;}
 /*end nav*/  
 .header .logo{ width: 100px}  
+
+/*内页*/ 
+.fon30{ font-size: 20px;}
+.fon20{ font-size: 14px;}
+.margin-b40{ margin-bottom:15px;}
+/*内页*/ 
+.ny-container{
+   flex-wrap: wrap; margin-top: 0;
+  .slider{  padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1);
+    h2{ font-size: 23px;}
+    .slider-list{ width: 100%; overflow-x: auto; overflow-y: hidden; display: flex;}
+    .slider-list li{ display: inline-block; flex-shrink: 0;}
+    .slider-list li a{ padding:10px 15px 10px 25px; margin-left: 5px;}
+    .slider-list li dl{  position: absolute; background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);}
+    .slider-list li.active dl{ display: none;}
+    
+  }
+  .main-con{ padding: 25px 30px; width: 100%; margin-top: 20px;;
+    h3{ font-size: 25px;}
+    .menu{  padding-bottom: 10px; margin-bottom: 10px; }
+  }
+}
+.ganyu-item{
+  h3{ font-size: 16px; margin-top: 15px ; margin-bottom: 15px;}
+  .p-dot::after{ top: 7px;}
+  .pading60{ padding: 0 20px;}
+}
+/*内页*/ 
+.new-list1{
+  li{ margin-top: 30px;}
+  .new-img{ width: 100%; background: #eee;}
+  .new-con{ width: 100%; padding: 10px;
+   h4{ font-size: 14px; font-weight: normal;}
+  }
+  .date{  padding: 10px 0;  margin-bottom: 10px;}
+  .news-desc{ margin-bottom: 10px;}
+}
 
    
 }
