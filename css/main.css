@@ -1512,15 +1512,6 @@ footer .link-box {
   .menber-item .ny-container .main-con {
     padding-left: 90px;
   }
-  .menber-list li {
-    width: 47%;
-  }
-  .menber-list li:nth-child(4n)::after, .menber-list li:nth-child(4n)::before {
-    display: block;
-  }
-  .menber-list li:nth-child(2n)::after, .menber-list li:nth-child(2n)::before {
-    display: none;
-  }
   .menber-list li::after {
     right: -10%;
   }

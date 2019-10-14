@@ -210,9 +210,9 @@ $colorb: #0a5281;
 .margin-b40{ margin-bottom:15px;}
 /*内页*/ 
 .ny-container{
-   flex-wrap: wrap; margin-top: 0;
+   flex-wrap: wrap; margin-top: 0; padding-left: 0; padding-right: 0;
   .slider{  padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1);
-    h2{ font-size: 23px;}
+    h2{ font-size: 23px; padding-left: 15px;}
     h3::before { display: none}
     .slider-list{ width: 100%; overflow-x: auto; overflow-y: hidden; display: flex;}
     .slider-list li{ display: inline-block; flex-shrink: 0;}
@@ -232,6 +232,7 @@ $colorb: #0a5281;
   .pading60{ padding: 0 20px;}
 }
 /*内页*/ 
+.ny-container .main-con h3::before{ display: none;}
 .new-list1{
   li{ margin-top: 30px;}
   .new-img{ width: 100%; background: #eee;}
@@ -243,18 +244,37 @@ $colorb: #0a5281;
 }
 .menber-item{
   .ny-container{ margin-left: 35px}
-  .ny-container .main-con{padding-left: 25px;}
+  .ny-container .main-con{padding-left: 25px; padding-top: 0;}
 }
 .margin-t{ margin-top: 60px !important}
 .menber-item {
-  h1{ padding-left: 30px; font-size: 1.8em;}
-  .dots{ width: 80px; height: 80px; left: -22%; top: -50%}
+  h1{ padding-left: 30px; font-size: 1.6em;}
+  .dots{ width: 50px; height: 50px; left: -20%; top: -12%}
   .dots .num{ font-size: 20px}
   .margin-b60{ margin-bottom: 60px}
   .dots .eng{ font-size: 12px}
   .fon25{ font-size: 18px;}
   .lines{padding: 0 0 10px 0 ; margin-bottom: 10px;}
+  .eng{ display: none;}
   
 }
+.menber-list {
+  li{ margin-top: 25px; width: 22%;}
+  li:nth-child(4n)::after,li:nth-child(4n)::before{ display: none}
+  .number{ font-size: 14px;}
+  .menber-tit{ font-size: 12px;}
+}
    
+.team-img-item {
+  margin-top: 30px;
+  li{ width: 100%; margin-bottom: 30px;}
+  li:last-child{ margin-bottom: 0;}
+}
+
+.team-list2 { 
+  li{
+    width: 100%;
+  }
+ 
+}
 }

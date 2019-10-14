@@ -336,6 +336,8 @@
   .ny-container {
     flex-wrap: wrap;
     margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .ny-container .slider {
     padding: 0;
@@ -345,6 +347,7 @@
   }
   .ny-container .slider h2 {
     font-size: 23px;
+    padding-left: 15px;
   }
   .ny-container .slider h3::before {
     display: none;
@@ -395,6 +398,9 @@
     padding: 0 20px;
   }
   /*内页*/
+  .ny-container .main-con h3::before {
+    display: none;
+  }
   .new-list1 li {
     margin-top: 30px;
   }
@@ -422,19 +428,20 @@
   }
   .menber-item .ny-container .main-con {
     padding-left: 25px;
+    padding-top: 0;
   }
   .margin-t {
     margin-top: 60px !important;
   }
   .menber-item h1 {
     padding-left: 30px;
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
   .menber-item .dots {
-    width: 80px;
-    height: 80px;
-    left: -22%;
-    top: -50%;
+    width: 50px;
+    height: 50px;
+    left: -20%;
+    top: -12%;
   }
   .menber-item .dots .num {
     font-size: 20px;
@@ -451,5 +458,34 @@
   .menber-item .lines {
     padding: 0 0 10px 0;
     margin-bottom: 10px;
+  }
+  .menber-item .eng {
+    display: none;
+  }
+  .menber-list li {
+    margin-top: 25px;
+    width: 22%;
+  }
+  .menber-list li:nth-child(4n)::after, .menber-list li:nth-child(4n)::before {
+    display: none;
+  }
+  .menber-list .number {
+    font-size: 14px;
+  }
+  .menber-list .menber-tit {
+    font-size: 12px;
+  }
+  .team-img-item {
+    margin-top: 30px;
+  }
+  .team-img-item li {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .team-img-item li:last-child {
+    margin-bottom: 0;
+  }
+  .team-list2 li {
+    width: 100%;
   }
 }
