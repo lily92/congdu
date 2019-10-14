@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  $('.head,.headactive').load("header.html", "", function (response, status, request) {
-    $(this).html(response);
+  $('#_header').load("header.html", "", function (response, status, request) {
+    $('#_header').html(response);
   });
 
   $('.footers').load("footer.html", "", function (response, status, request) {
