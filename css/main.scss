@@ -267,6 +267,17 @@ img {
   }
 }
 .headactive .header{ box-shadow: 0 3px 6px rgba($color: #000, $alpha: 0.1);}
+.search-form{
+  ::-webkit-input-placeholder {
+    color: $colorf;
+  }
+  ::-moz-placeholder {
+    color: $colorf;
+  }
+  :-ms-input-placeholder {
+    color:  $colorf;
+  }
+}
 
 /*index*/
 .padding120 {
@@ -452,6 +463,7 @@ img {
     right: 30px;
     color: $colorf;
   }
+  .item-more:hover{ color: $colorb;}
   .item:hover .item-master {
     background: rgba(0, 0, 0, 0);
   }
