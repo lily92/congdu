@@ -73,7 +73,7 @@
   dl dd { line-height: 40px; }
   dl dd a { padding-left: 25px; display: block; border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
   .nav-mobile .btn-search { background: url(../images/search-icon.png) no-repeat center; border: 0; font-size: 0; width: 30px; height: 30px; }
-  .nav-mobile .search-txt { background: none; border: 0; border-bottom: 1px solid #fff; width: calc(100% - 60px); outline: none; color: #fff; }
+  .nav-mobile .search-txt { background: none; border: 0; border-bottom: 1px solid #fff; width: calc(100% - 60px); outline: none; color: #fff; border-radius: 0; }
   .nav-mobile .search-form { border-bottom-color: rgba(224, 208, 208, 0.3); }
   .nav-mobile .phone-search { display: flex; width: 100%; margin: 15px 0; padding: 15px 0 15px 15px; background: none; }
   .search-close { line-height: 30px; color: #fff; font-size: 20px; }

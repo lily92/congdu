@@ -196,7 +196,7 @@ $colorb: #0a5281;
   }
   .nav-mobile {
     .btn-search{ background: url(../images/search-icon.png) no-repeat center; border: 0; font-size: 0; width: 30px; height: 30px;}
-    .search-txt{ background: none; border :0; border-bottom: 1px solid #fff; width: calc(100% - 60px); outline: none; color: #fff;}
+    .search-txt{ background: none; border :0; border-bottom: 1px solid #fff; width: calc(100% - 60px); outline: none; color: #fff; border-radius: 0;}
     .search-form{ border-bottom-color: rgba(224, 208, 208, 0.3)}
     .phone-search{ display: flex; width: 100%; margin: 15px 0; padding:15px 0 15px 15px; background: none;}
   }
