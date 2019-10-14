@@ -704,7 +704,10 @@ footer {
   .main-con{ width:calc(100% - 70px); background: #fff; background-size:cover;padding: 60px 90px 120px 90px; position: relative;  z-index: 2;
      h3{ font-size: 37px; color:#39444a; font-weight: normal; position: relative;}
      h3::before{ display: block; content: '';  width: 12px; height: 4px; background:#39444a ;left: -20px;  position: absolute; top: 50%; transform: translateY(-50%);}
-     .menu{ font-size: 12px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px;}
+     .menu{ font-size: 12px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px; color: #78848b;
+     a{ color: #78848b;}
+    }
+     
   }
  
   .main-con-news{ padding-left: 23px; padding-right: 23px;

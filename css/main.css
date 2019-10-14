@@ -1065,6 +1065,11 @@ footer .link-box {
   padding-bottom: 30px;
   border-bottom: 1px solid #0a5281;
   margin-bottom: 30px;
+  color: #78848b;
+}
+
+.ny-container .main-con .menu a {
+  color: #78848b;
 }
 
 .ny-container .main-con-news {
