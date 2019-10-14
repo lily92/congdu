@@ -9,7 +9,7 @@
   .max640 { padding: 0 15px; }
   #_banner .banner-txt1 { font-size: 20px; }
   #_banner .banner-txt2 { font-size: 25px; padding-bottom: 20px; margin-bottom: 20px; }
-  #_banner .banner-arrow { bottom: 50%; left: auto; transform: translateX(0); }
+  #_banner .banner-arrow { bottom: 80px; left: auto; transform: translateX(0); }
   #_about h2, #_menber h2 { font-size: 25px; }
   #_about .flex-about, #_menber .flex-about { margin-bottom: 20px; }
   #_about .about-video, #_menber .about-video { padding: 15px 15px; }
