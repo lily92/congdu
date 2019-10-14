@@ -3,9 +3,9 @@ body {
   overflow-x: hidden !important;
   overflow-y: scroll;
   width: 100%;
-  color: #333;
+  color: #45525a;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   font-family: "Microsoft Yahei", Tahoma;
 }
 
@@ -487,7 +487,7 @@ img {
 
 #_about .about-desc,
 #_menber .about-desc {
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 #_about .about-num,
@@ -659,7 +659,7 @@ img {
 }
 
 #_menber .padding40 {
-  padding: 123px 40px 0;
+  padding: 123px 20px 0;
 }
 
 #_menber .menber-flex {
@@ -702,9 +702,7 @@ img {
 
 #_news .news {
   display: flex;
-  align-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 30px;
 }
 
 #_news h2 {
@@ -889,23 +887,39 @@ footer .link-box {
   z-index: 1;
 }
 
+#fp-nav.fp-right {
+  bottom: 60px;
+  top: auto;
+}
+
 #fp-nav ul li, .fp-slidesNav ul li {
+  min-height: auto;
+  height: auto;
+}
+
+#fp-nav ul li a {
   height: 20px;
+}
+
+#fp-nav ul li a.active {
+  height: 60px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   width: 2px;
-  height: 20px;
+  height: 100%;
   border-radius: 0;
   background: #c0a88c;
+  display: block;
 }
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
   width: 2px;
-  height: 20px;
   margin: 0 0 0 -2px;
   border-radius: 0;
   background: #0a5281;
+  height: 100%;
+  margin-top: -23px;
 }
 
 /*内页*/
@@ -931,7 +945,7 @@ footer .link-box {
 
 .ny-container .slider {
   width: 270px;
-  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09);
   padding: 50px 0 50px 50px;
   background: #fff;
   margin-top: 40px;
@@ -1012,11 +1026,19 @@ footer .link-box {
   display: block;
 }
 
+.ny-container .bgf {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
 .ny-container .main-con {
   width: calc(100% - 70px);
-  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
   background: #fff;
+  background-size: cover;
   padding: 60px 90px 120px 90px;
+  position: relative;
+  z-index: 2;
 }
 
 .ny-container .main-con h3 {
@@ -1056,6 +1078,34 @@ footer .link-box {
 
 .ny-container .marginl40 {
   padding-left: 30px;
+}
+
+.ny-container::before {
+  width: 184px;
+  height: 612px;
+  background: url(../images/left.png) no-repeat left top;
+  position: absolute;
+  left: 220px;
+  top: 0;
+  content: '';
+}
+
+.ny-container::after {
+  width: 184px;
+  height: 612px;
+  background: url(../images/right.png) no-repeat left top;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  content: '';
+}
+
+.ny-container.nobg::before {
+  display: none;
+}
+
+.ny-container.nobg::after {
+  display: none;
 }
 
 /*健康管理-整合干预*/
@@ -1150,6 +1200,7 @@ footer .link-box {
   border: 1px solid #eee;
   align-items: center;
   padding-right: 2.3%;
+  line-height: 1.3;
 }
 
 .new-list1 .new-con h4 {
@@ -1231,11 +1282,12 @@ footer .link-box {
 
 .position-line {
   position: absolute;
-  background: rgba(43, 103, 144, 0.85);
+  background: rgba(12, 82, 129, 0.85);
   bottom: 0;
   width: 100%;
   padding: 8px;
   color: #fff;
+  height: 43%;
 }
 
 .team-list2 {
@@ -1285,6 +1337,7 @@ footer .link-box {
   margin-top: 76px;
   position: relative;
   background: #fff;
+  padding: 0 1.3%;
 }
 
 .menber-list li::after {
@@ -1303,7 +1356,7 @@ footer .link-box {
   display: block;
   content: '';
   width: 130%;
-  left: 0;
+  left: 10%;
   height: 1px;
   border-bottom: 1px dashed #0a5281;
   top: 50%;
@@ -1371,6 +1424,19 @@ footer .link-box {
 
 .menber-item .dots .num {
   font-size: 40px;
+  position: relative;
+}
+
+.menber-item .dots .num::after {
+  display: block;
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: #c1a367;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3px;
 }
 
 .menber-item .dots .eng {
@@ -1405,6 +1471,11 @@ footer .link-box {
   margin-bottom: 180px;
 }
 
+/*修改*/
+.padding-left10 {
+  padding-left: 13px;
+}
+
 /*end 内页*/
 @media (min-width: 768px) {
   .header nav li {
@@ -1430,6 +1501,9 @@ footer .link-box {
 @media (max-width: 1440px) {
   .max640 {
     padding-left: 40px;
+  }
+  .ny-container .main-con {
+    padding: 30px 45px 60px 45px;
   }
 }
 
@@ -1467,6 +1541,12 @@ footer .link-box {
   }
   .menber-list .menber-tit {
     font-size: 15px;
+  }
+  .team-img-item li {
+    width: 100%;
+  }
+  .team-list2 li {
+    width: 48%;
   }
 }
 
@@ -1511,6 +1591,12 @@ footer .link-box {
   }
   .menber-item .ny-container .main-con {
     padding-left: 90px;
+  }
+  .menber-list .number {
+    font-size: 20px;
+  }
+  .menber-list .menber-tit {
+    font-size: 12px;
   }
   .menber-list li::after {
     right: -10%;

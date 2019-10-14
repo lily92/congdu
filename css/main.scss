@@ -9,9 +9,9 @@ body {
   overflow-x: hidden !important;
   overflow-y: scroll;
   width: 100%;
-  color: $color3;
+  color:#45525a;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   font-family: "Microsoft Yahei", Tahoma;
 }
 body,
@@ -364,7 +364,7 @@ img {
   }
   .about-num-item:hover{ animation: bounceIn 1s ;}
   .about-desc {
-    padding: 30px 0;
+    padding: 15px 0;
   }
   .about-num {
     margin-bottom: 60px;
@@ -480,7 +480,7 @@ img {
     justify-content: center;
   }
   .padding40 {
-    padding: 123px 40px 0;
+    padding: 123px 20px 0;
   }
   .menber-flex {
     justify-content: space-between;
@@ -510,9 +510,9 @@ img {
   padding-top: 123px;
   .news {
     display: flex;
-    align-content: space-around;
+    // align-content: space-around;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    // min-height: 100vh;
   }
   h2 {
     font-size: 46px;
@@ -662,9 +662,15 @@ footer {
 }
 
 #fp-nav{ z-index: 1;}
-#fp-nav ul li, .fp-slidesNav ul li{ height: 20px;}
-#fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 20px ; border-radius: 0; background: #c0a88c}
-#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px;  height: 20px;  margin: 0 0 0 -2px;  border-radius: 0; background: $colorb}
+#fp-nav.fp-right{ bottom: 60px; top: auto;}
+#fp-nav ul li, .fp-slidesNav ul li{  min-height: auto; height: auto;}
+
+#fp-nav ul li a{ height: 20px;}
+#fp-nav ul li a.active{ height: 60px;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 100% ; border-radius: 0; background: #c0a88c; display: block;}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px; margin: 0 0 0 -2px;  border-radius: 0; background: $colorb; height: 100%; margin-top: -23px;}
+
+
 
 /*内页*/
 /*about*/
@@ -673,7 +679,7 @@ footer {
 .margin-b40{ margin-bottom: 40px;}
 .ny-container{
   margin: -125px auto 0; position: relative; display: flex; align-items: flex-start;
-  .slider{ width: 270px;box-shadow: 0 0 5px -1px rgba($color: #000, $alpha: 0.2); padding: 50px 0 50px 50px;  background: $colorf; margin-top: 40px;}
+  .slider{ width: 270px;box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09); padding: 50px 0 50px 50px;  background: $colorf; margin-top: 40px;}
   h2{ font-size: 25px; border-bottom: 1px solid #ede7e0; font-weight: normal; color: $colorb; padding-bottom: 15px;}
   .slider-list{
     li{
@@ -693,18 +699,24 @@ footer {
       dl{ display: block;}
     }
   }
-  .main-con{ width:calc(100% - 70px); box-shadow: 0 0 5px -1px  rgba($color: #000, $alpha: 0.2) ; background: $colorf;padding: 60px 90px 120px 90px;
+  // box-shadow: 0 0 5px -1px  rgba($color: #000, $alpha: 0.2) ;
+  .bgf{ position: relative; z-index: 2; background: #fff;}
+  .main-con{ width:calc(100% - 70px); background: #fff; background-size:cover;padding: 60px 90px 120px 90px; position: relative;  z-index: 2;
      h3{ font-size: 37px; color:#39444a; font-weight: normal; position: relative;}
      h3::before{ display: block; content: '';  width: 12px; height: 4px; background:#39444a ;left: -20px;  position: absolute; top: 50%; transform: translateY(-50%);}
      .menu{ font-size: 12px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px;}
-  
   }
+ 
   .main-con-news{ padding-left: 23px; padding-right: 23px;
    h3::before{ display: none;}
   }
   .marginl40{padding-left: 30px;}
 }
+.ny-container::before{ width: 184px; height: 612px; background: url(../images/left.png) no-repeat left top; position: absolute; left: 220px; top: 0;content: '';}
+.ny-container::after{ width: 184px; height: 612px; background: url(../images/right.png) no-repeat left top; position: absolute; right:-20px; top: 0;content: '';}
 
+.ny-container.nobg::before{ display: none;}
+.ny-container.nobg::after{ display: none;}
 /*健康管理-整合干预*/ 
 .colorb{ color: $colorb;}
 .line5 p{ margin-bottom: 10px;}
@@ -729,7 +741,7 @@ footer {
 .new-list1{
   li{ justify-content: space-between; margin-top: 60px;}
   .new-img{ width: 43.6%; background: #eee;}
-  .new-con{ width: 56.4%; padding-left: 3.9%; border: 1px solid #eee; align-items: center; padding-right: 2.3%;
+  .new-con{ width: 56.4%; padding-left: 3.9%; border: 1px solid #eee; align-items: center; padding-right: 2.3%; line-height: 1.3;
    h4{ font-size: 25px; font-weight: normal; padding-top: 5px}
   }
   .date{ color: #c1a367; padding: 20px 0; border-bottom: 1px solid #e1eaf0; margin-bottom: 20px;}
@@ -746,7 +758,7 @@ footer {
 .team-con1{ position: absolute; width: 100%; height: 46%; left: 0; bottom: 0; background: rgba($color: #2b6790, $alpha: 0.85); color: $colorf; text-align: center;
  div{ padding: 0 30px}
 } 
-.position-line{ position: absolute; background: rgba($color: #2b6790, $alpha: 0.85); bottom: 0; width: 100%; padding: 8px; color: $colorf}
+.position-line{ position: absolute; background: rgba($color: #0c5281, $alpha: 0.85); bottom: 0; width: 100%; padding: 8px; color: $colorf; height: 43%;}
 .team-list2{
   display: flex; justify-content: space-between;  flex-wrap: wrap;
   li{ width: 24%; text-align: center; margin-top: 26px}
@@ -756,9 +768,9 @@ footer {
 }
 .menber-list{
   display: flex; justify-content: space-between; flex-wrap: wrap;
-  li{ width:20.01%; text-align: center; margin-top: 76px; position: relative;  background: $colorf}
+  li{ width:20.01%; text-align: center; margin-top: 76px; position: relative;  background: $colorf; padding: 0 1.3%;}
   li::after{ position: absolute; display: block; content: ''; width: 15px ; height: 24px; background: url(../images/line-sanjiao.png); right: -22%; top: 50%; transform: translateY(-50%)}
-  li::before{ display: block; content: ''; width: 130%; left: 0; height: 1px; border-bottom: 1px dashed $colorb; top: 50%; transform: translateY(-50%); position: absolute; z-index: 1;}
+  li::before{ display: block; content: ''; width: 130%; left: 10%; height: 1px; border-bottom: 1px dashed $colorb; top: 50%; transform: translateY(-50%); position: absolute; z-index: 1;}
   .number{ font-size: 34px; color: #aa8c6c}
   .menber-tit{ color: #39444a; font-size: 19px;}
   .dot{ position: relative;  background: $colorf; z-index: 1;}
@@ -770,7 +782,8 @@ footer {
  .main-con{ background: #fbfbfb; border-left: 1px solid $colorb; padding-top: 0; padding-bottom: 0; margin-top: 60px; margin-bottom: 60px} 
  h1{ font-weight: normal; position: relative;}
  .dots{ position: absolute; width: 125px; height: 125px; border-radius: 50%; background: $colorb; color: $colorf;  left: -155px; top: -100%;
-  .num{ font-size: 40px}
+  .num{ font-size: 40px; position: relative;}
+  .num::after{ display: block; content: ''; width: 30px; height: 1px; background: #c1a367; position: absolute; left: 50%; transform: translateX(-50%); bottom: 3px;}
   .eng{ font-size: 16px; text-transform: uppercase}
 }
 .lines{ padding: 30px 0 0 0; height: 1px; border-bottom: 1px solid $colorb;margin-bottom: 30px;}
@@ -781,6 +794,8 @@ footer {
 .margin-t{ margin-top: 200px !important}
 .margin-b60{ margin-bottom: 180px}
 
+/*修改*/
+.padding-left10{ padding-left:13px} 
 
 
 /*end 内页*/ 
@@ -813,6 +828,7 @@ footer {
 
 @media (max-width: 1440px) {
   .max640{ padding-left: 40px;}
+  .ny-container .main-con{ padding:30px 45px 60px 45px;}
 }
 
 @media (max-width:1200px) {
@@ -828,6 +844,9 @@ footer {
   }
   .menber-list .number{ font-size: 20px}
   .menber-list .menber-tit{ font-size: 15px}
+
+  .team-img-item li{ width: 100%;}
+  .team-list2 li{ width: 48%;}
 }
 @media (max-width:1024px){
   .menber-list .number{ font-size: 25px}
@@ -852,6 +871,8 @@ footer {
   .menber-item{
     .ny-container .main-con{ padding-left: 90px;}
   }
+  .menber-list .number{ font-size: 20px}
+  .menber-list .menber-tit{ font-size: 12px}
 
   // .menber-list li{
   //    width: 47%;
