@@ -29,13 +29,13 @@
   #_menber .menber-flex li { padding: 5px 0; width: 49%; }
   #_menber .marginauto { margin: 20px auto; display: block; }
   #_menber .menber-bg { padding-top: 70px; }
-  #_news { padding-top: 70px; }
-  #_news h2 { padding: 15px 0; font-size: 25px; line-height: 1; }
-  #_news .btn-next-prev { padding: 5px 0; }
+  #_news { padding-top: 70px; background-size: cover; }
+  #_news h2 { padding: 35px 0; font-size: 25px; line-height: 1; }
+  #_news .btn-next-prev { padding: 35px 0; }
   #_news .btn-next-prev a { color: #fff; border-color: #fff; }
   #_news .title { font-size: 18px; }
   #_news .new-desc { padding: 10px; }
-  #_news .margint10 { margin-top: 10px; }
+  #_news .margint10 { margin-top: 10px; padding-bottom: 30px; }
   #_news .btn-group a { border-color: #fff; color: #fff; }
   footer { padding: 20px 0; }
   footer .contact { flex-shrink: 0; }
@@ -94,7 +94,7 @@
   .margin-b40 { margin-bottom: 15px; }
   /*内页*/
   .ny-container { flex-wrap: wrap; margin-top: 0; padding-left: 0; padding-right: 0; }
-  .ny-container .slider { padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1); }
+  .ny-container .slider { padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1); display: none; }
   .ny-container .slider h2 { font-size: 23px; padding-left: 15px; }
   .ny-container .slider h3::before { display: none; }
   .ny-container .slider .slider-list { width: 100%; overflow-x: auto; overflow-y: hidden; display: none; }
