@@ -429,7 +429,7 @@ img {
 }
 
 #_about.active{
-  .about-ani{ animation: fadeInUp 1s}
+  .about-ani{ animation: fadeInDown 1s}
 }
 
 // #_about.active {
@@ -491,7 +491,7 @@ img {
   }
 }
 #_item.active{
-  .item-ani{animation: fadeInUp 1s;}
+  .item-ani{animation: fadeInDown 1s;}
   
 }
 .max660 {
@@ -534,7 +534,7 @@ img {
   }
 }
 #_menber.active{
-  .menber-img,.menber-bg{animation: fadeInUp 1s;}
+  .menber-img,.menber-bg{animation: fadeInDown 1s;}
 
 }
 
@@ -610,7 +610,7 @@ img {
   }
 }
 #_news.active{
-  .news{animation: fadeInUp 1s;}
+  .news{animation: fadeInDown 1s;}
 }
 .new-right {
   width: 38px;

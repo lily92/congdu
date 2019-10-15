@@ -219,7 +219,7 @@ img { max-width: 100%; border: none; }
 
 #_about .swiper-container-vertical > .swiper-scrollbar, #_menber .swiper-container-vertical > .swiper-scrollbar { width: 2px; }
 
-#_about.active .about-ani { animation: fadeInUp 1s; }
+#_about.active .about-ani { animation: fadeInDown 1s; }
 
 .btn-group a { display: inline-block; width: 150px; height: 40px; border-radius: 20px; border: 1px solid #0a5281; color: #0a5281; text-align: center; line-height: 38px; }
 
@@ -241,7 +241,7 @@ img { max-width: 100%; border: none; }
 
 #_item .item:hover .item-master { background: transparent; }
 
-#_item.active .item-ani { animation: fadeInUp 1s; }
+#_item.active .item-ani { animation: fadeInDown 1s; }
 
 .max660 { max-width: 660px; }
 
@@ -267,7 +267,7 @@ img { max-width: 100%; border: none; }
 
 #_menber .icon { padding-top: 10px; width: 40px; flex-shrink: 0; }
 
-#_menber.active .menber-img, #_menber.active .menber-bg { animation: fadeInUp 1s; }
+#_menber.active .menber-img, #_menber.active .menber-bg { animation: fadeInDown 1s; }
 
 #_news { z-index: 1; background: url(../images/index-news.jpg) no-repeat center top; padding-top: 123px; }
 
@@ -299,7 +299,7 @@ img { max-width: 100%; border: none; }
 
 #_news .btn-next-prev { padding: 30px 0; }
 
-#_news.active .news { animation: fadeInUp 1s; }
+#_news.active .news { animation: fadeInDown 1s; }
 
 .new-right { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #0a5281; color: #0a5281; text-align: center; line-height: 36px; display: inline-block; }
 
