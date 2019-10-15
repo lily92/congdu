@@ -96,6 +96,22 @@ img { max-width: 100%; border: none; }
 
 .header .lang { white-space: nowrap; }
 
+.header nav { position: relative; }
+
+.header .nav-line { position: absolute; width: calc(100% / 8); display: block; content: ''; left: 0; bottom: -1px; height: 2px; background: #0a5281; transition: .2s linear all; }
+
+.header .nav-line.line0 { left: 0; }
+
+.header .nav-line.line1 { left: calc(16.66% - 12px); }
+
+.header .nav-line.line2 { left: calc(33.332%); }
+
+.header .nav-line.line3 { left: calc(49.998%); }
+
+.header .nav-line.line4 { left: calc(68%); }
+
+.header .nav-line.line5 { left: calc(84.66%); }
+
 .header nav ul { flex-wrap: nowrap; height: 122px; }
 
 .header nav ul li { height: 122px; }
