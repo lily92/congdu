@@ -902,7 +902,17 @@ footer {
   #_item{
     .item-title{ font-size: 27px; padding-top: 100px}
   }
-  footer{ padding: 30px 0}
+  footer{ padding: 30px 0;
+    .f-title{ font-size:18px}
+  }
+
+  .ny-container{
+    .main-con h3{ font-size: 30px}
+    .margin-b40{ margin-bottom: 20px;}
+    .menu{ margin-bottom: 20px; padding-bottom: 20px;}
+    .fon30{ font-size:20px}
+    .fon20{ font-size:16px}
+  }
   
 }
 

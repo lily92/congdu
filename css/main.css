@@ -561,7 +561,13 @@ footer .link-box { width: calc(100% - 400px); }
   #_news .btn-next-prev { padding: 20px 0; }
   #_news .btn-group { padding-bottom: 20px; }
   #_item .item-title { font-size: 27px; padding-top: 100px; }
-  footer { padding: 30px 0; } }
+  footer { padding: 30px 0; }
+  footer .f-title { font-size: 18px; }
+  .ny-container .main-con h3 { font-size: 30px; }
+  .ny-container .margin-b40 { margin-bottom: 20px; }
+  .ny-container .menu { margin-bottom: 20px; padding-bottom: 20px; }
+  .ny-container .fon30 { font-size: 20px; }
+  .ny-container .fon20 { font-size: 16px; } }
 
 @media (max-width: 1200px) { .ganyu-item .item-padding270 { padding-left: 0; }
   .new-list1 li { margin-top: 30px; }
