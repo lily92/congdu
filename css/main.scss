@@ -764,6 +764,8 @@ footer {
 
 .ny-container.nobg::before{ display: none;}
 .ny-container.nobg::after{ display: none;}
+.ny-container.news-con::after{ right: 50px;}
+.ny-container.news-con::before{left: -10px;}
 /*健康管理-整合干预*/ 
 .colorb{ color: $colorb;}
 .line5 p{ margin-bottom: 10px;}
