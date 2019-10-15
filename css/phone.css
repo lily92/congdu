@@ -73,6 +73,9 @@
   #_item .item {
     width: 50%;
   }
+  #_item .item:hover {
+    width: 50%;
+  }
   #_item .item-more {
     bottom: 20px;
     top: auto;
