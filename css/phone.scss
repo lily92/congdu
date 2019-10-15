@@ -27,6 +27,7 @@ $colorb: #0a5281;
     }
     
     #_item{
+        .item-ani{ flex-wrap: wrap;}
         .paddingt65{ padding-top: 65px; height: 100%;}
         .item{ width: 50%}
         .item-more{ bottom: 20px; top: auto; font-size: 13px}
@@ -263,7 +264,7 @@ $colorb: #0a5281;
   .ny-container{ margin-left: 35px}
   .ny-container .main-con{padding-left: 25px; padding-top: 0;}
 }
-.margin-t{ margin-top: 60px !important}
+.margin-t{ margin-top: 30px !important}
 .menber-item {
   h1{ padding-left: 30px; font-size: 1.6em;}
   .dots{ width: 50px; height: 50px; left: -20%; top: -12%}

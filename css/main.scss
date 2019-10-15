@@ -361,7 +361,7 @@ img {
   align-items: center;
   h2 {
     color: #45525a;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: normal;
     border-bottom: 2px solid $colorb;
   }
@@ -473,8 +473,9 @@ img {
 #_item {
   z-index: 4;
   .paddingt65{ height: 100%;}
+  .item-ani{ flex-wrap: nowrap;}
   .item {
-    width: 25%; transition: .3s linear all;
+    width: 25%; transition: .3s linear all; opacity: 0; transition: .3s linear all;
   }
   .item-title {
     font-size: 37px;
@@ -493,12 +494,18 @@ img {
     color: $colorf;
   }
   .item-more:hover{ color: $colorb;}
+  .item:hover{ width: 27%;}
   .item:hover .item-master {
     background: rgba(0, 0, 0, 0);
   }
 }
 #_item.active{
-  .item-ani{animation: fadeInDown 1s;}
+  // .item-ani{animation: fadeInDown 1s;}
+  .item.item0 {animation: fadeIn 1s;animation-delay: 0.5s; animation-fill-mode: forwards; }
+  .item.item1 {animation: fadeIn 1s; animation-delay: 1.5s; animation-fill-mode: forwards; }
+  .item.item2 {animation: fadeIn 1s; animation-delay: 2.5s;  animation-fill-mode: forwards;}
+  .item.item3 {animation: fadeIn 1s; animation-delay: 3.5s; animation-fill-mode: forwards; }
+  // .item{ opacity: 1;}
   
 }
 .max660 {
@@ -529,10 +536,10 @@ img {
     li:hover  .m-desc{ transform: scale(1.2) translateX(15px)}
   }
   .cn {
-    font-size: 26px;
+    font-size: 18px;
   }
   .en {
-    font-size: 18px;
+    font-size: 16px;
   }
   .icon {
     padding-top: 10px;
@@ -582,8 +589,9 @@ img {
   }
   .new-desc {
     padding: 25px;
-    background: #fff;
+    background: #fff; position: relative;
   }
+  .new-desc .after{ position: absolute;bottom: 5px; right: 10px; background: url(../images/icon-more.png) no-repeat center right; padding-right: 10px; display: inline-block;  color: #ac8d6d;}
   .new-date {
     width: 60px;
     height: 60px;
@@ -805,7 +813,8 @@ footer {
   }
   .date{ color: #c1a367; padding: 20px 0; border-bottom: 1px solid #e1eaf0; margin-bottom: 20px;}
   .news-desc{ color: #78848b; margin-bottom: 20px;}
-  .new-more{ display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: $colorf; background: $colorb; margin-bottom: 5px} 
+  .new-more{ display: block; width: 100px; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; color: $colorf; background: $colorb; margin-bottom: 5px; transition: .2s linear all;} 
+  .new-more:hover{ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); transform: translate3d(0, -3px, 0);}
 }
 /*team*/
 .far{ font-family: Arial, Helvetica, sans-serif}
@@ -850,7 +859,7 @@ footer {
 .fon25{ font-size: 25px}
 }
 .noshodow{ box-shadow: none !important; }
-.margin-t{ margin-top: 200px !important}
+.margin-t{ margin-top: 80px !important}
 .margin-b60{ margin-bottom: 180px}
 
 /*修改*/
@@ -898,7 +907,7 @@ footer {
   }
   #_menber{
     .menber-flex li{ padding: 10px 0;}
-    .cn{ font-size: 18px}
+    .cn{ font-size: 17px}
     .en{ font-size: 14px}
     .btn-group{ padding: 5px 0;}
   }
