@@ -754,7 +754,7 @@ footer {
      
   }
  
-  .main-con-news{ padding-left: 23px; padding-right: 23px;
+  .main-con-news{ padding-left: 23px; padding-right: 23px; width: 100%;
    h3::before{ display: none;}
   }
   .marginl40{padding-left: 30px;}
@@ -764,8 +764,9 @@ footer {
 
 .ny-container.nobg::before{ display: none;}
 .ny-container.nobg::after{ display: none;}
-.ny-container.news-con::after{ right: 50px;}
-.ny-container.news-con::before{left: -10px;}
+.ny-container.news-con::after{ right: -30px;}
+.ny-container.news-con::before{left: -30px;}
+.news-con{ background: #fff; z-index: 1; padding-left: 0; padding-right: 0;}
 /*健康管理-整合干预*/ 
 .colorb{ color: $colorb;}
 .line5 p{ margin-bottom: 10px;}
