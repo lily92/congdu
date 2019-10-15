@@ -438,27 +438,39 @@
                 easing: 'easeInOutCubic',
                 afterRender: function () {
                     var swiper = new Swiper('.banner', {
-                // autoplay: true,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination-banner',
-                    // type: 'fraction',
-                    clickable: true
+                        // autoplay: true,
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination-banner',
+                            // type: 'fraction',
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: '#banner_next',
+                            prevEl: '#banner_prev',
+                        },
+                    });
+                    var swiper_about = new Swiper('.video-desc-box', {
+                        direction: 'vertical',
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                        },
+                        mousewheel: true,
+                    });
+
+
                 },
-                navigation: {
-                    nextEl: '#banner_next',
-                    prevEl: '#banner_prev',
+                afterLoad: function (anchorLink, section) {
+                    if (section.index >= 1) {
+                        $('#header').addClass('active')
+                    } else {
+                        $('#header').removeClass('active')
+                    }
                 },
             });
-            var swiper_about = new Swiper('.video-desc-box', {
-                direction: 'vertical',
-                slidesPerView: 'auto',
-                freeMode: true,
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                },
-                mousewheel: true,
-            });
+
             var swiper_news = new Swiper('.news-box', {
                 slidesPerView: 3,
                 spaceBetween: 25,
@@ -487,18 +499,6 @@
                     },
                 }
             });
-       
-                },
-                afterLoad: function (anchorLink, section) {
-                    if (section.index >= 1) {
-                        $('#header').addClass('active')
-                    } else {
-                        $('#header').removeClass('active')
-                    }
-                },
-            });
-            
-       
         });
 
     </script>
