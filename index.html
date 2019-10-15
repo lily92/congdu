@@ -15,9 +15,8 @@
     <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <!-- <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.js"></script> -->
-    <script src="js/jquery.slimscroll.min.js"></script>
-    <script src="https://cdn.bootcss.com/fullPage.js/3.0.7/vendors/scrolloverflow.min.js"></script>
+    <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/fullPage.js/3.0.7/vendors/scrolloverflow.min.js"></script> -->
     <script type="text/javascript" src="js/fullpage/fullpage.js"></script>
     <script src="js/main.js"></script>
     <!--[if lt IE 9]>
@@ -316,7 +315,7 @@
         </div>
         <!-- end menber -->
         <!-- news -->
-        <div class="section" id="_news">
+        <div class="section index_new" id="_news">
             <div class="wh100 news">
                 <h2 class="text-center">新闻中心</h2>
                 <!-- Swiper -->
@@ -339,7 +338,7 @@
                                         <p class="nowarp title">从都生命健康管理 ，起步即与世界同步</p>
                                         <p class="nowarp desc">2018年7月11号，从都整合健康管理国际论坛暨从都</p>
                                     </div>
-                                    <a href= ""  class="after">详情</a>
+                                    <a href="" class="after">详情</a>
                                 </div>
                             </div>
                         </div>
@@ -360,7 +359,7 @@
                                         <p class="nowarp title">习近平会见出席“2018从都国际论坛”外方嘉宾</p>
                                         <p class="nowarp desc">国家主席习近平12日在人民大会堂会见出席“2018从都国际论坛”外方嘉宾。习近平着重介绍了</p>
                                     </div>
-                                    <a href= ""  class="after">详情</a>
+                                    <a href="" class="after">详情</a>
                                 </div>
                             </div>
                         </div>
@@ -381,11 +380,11 @@
                                         <p class="nowarp title">从都生命健康管理医院-期项目验收报告</p>
                                         <p class="nowarp desc">及环境保护工作组竣工意见</p>
                                     </div>
-                                    <a href= ""  class="after">详情</a>
+                                    <a href="" class="after">详情</a>
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </div>
                     <!-- Add Pagination -->
@@ -399,11 +398,15 @@
                     <a href="news.html" class="trans">了解更多 > </a>
                 </div>
             </div>
-            <div class="footers"></div>
 
         </div>
         <!-- end news -->
 
+        <!--star  footer -->
+        <div class="section"  id="_footer">
+            <footer class="footers footer"  id="footer"></footer>
+        </div>
+        <!--end  footer -->
     </div>
 
     <script type="text/javascript">
@@ -411,11 +414,11 @@
             var myFullpage = new fullpage('#fullpage', {
                 fixedElements: '#header',
                 verticalCentered: false,//设置内容不垂直居中
-                anchors: ['banner', 'about', 'item', 'menber', 'news'],
-                sectionsColor: ['#68b5fc', '#fff', '#fff', 'f5bdbd', 'f5b8b4'],
+                anchors: ['banner', 'about', 'item', 'menber', 'news','footers'],
+                sectionsColor: ['#68b5fc', '#fff', '#fff', 'f5bdbd', 'f5b8b4','#0a5281'],
                 scrollBar: false,
                 navigation: true,//是否显示导航，默认为false
-                scrollOverflow: true,//内容超过满屏后是否显示滚动条，true则显示滚动条，若需滚动查看内容还需要jquery.slimscroll插件的配合
+                scrollOverflow: false,//内容超过满屏后是否显示滚动条，true则显示滚动条，若需滚动查看内容还需要jquery.slimscroll插件的配合
                 afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 },
                 // css3:false,
