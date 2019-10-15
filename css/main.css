@@ -549,6 +549,7 @@ footer .link-box { width: calc(100% - 400px); }
 
 @media (max-width: 1440px) { .max640 { padding-left: 40px; }
   .ny-container .main-con { padding: 30px 45px 60px 45px; }
+  .ny-container .main-con.menber-cons { padding: 30px 45px 60px 90px; }
   #_banner .banner-txt1 { font-size: 36px; }
   #_banner .banner-txt2 { font-size: 56px; padding: 30px 0; margin-bottom: 30px; }
   #_about h2, #_menber h2 { font-size: 30px; }

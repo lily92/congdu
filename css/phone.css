@@ -92,6 +92,7 @@
   .fon30 { font-size: 20px; }
   .fon20 { font-size: 14px; }
   .margin-b40 { margin-bottom: 15px; }
+  .ny-banner { padding-top: 65px; }
   /*内页*/
   .ny-container { flex-wrap: wrap; margin-top: 0; padding-left: 0; padding-right: 0; }
   .ny-container .slider { padding: 0; width: 100%; margin-top: 20px; box-shadow: 0 0 0 rgba(255, 255, 255, 0.1); display: none; }
