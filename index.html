@@ -421,7 +421,7 @@
         <!-- end news -->
 
     </div>
-   
+
     <script type="text/javascript">
         $(function () {
             var myFullpage = new fullpage('#fullpage', {
@@ -435,16 +435,9 @@
                 afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 },
                 // css3:false,
-                easing:'easeInOutCubic',
-                afterLoad: function (anchorLink, section) {
-                    if (section.index >= 1) {
-                        $('#header').addClass('active')
-                    } else {
-                        $('#header').removeClass('active')
-                    }
-                },
-            });
-            var swiper = new Swiper('.banner', {
+                easing: 'easeInOutCubic',
+                afterRender: function () {
+                    var swiper = new Swiper('.banner', {
                 // autoplay: true,
                 loop: true,
                 pagination: {
@@ -494,6 +487,18 @@
                     },
                 }
             });
+       
+                },
+                afterLoad: function (anchorLink, section) {
+                    if (section.index >= 1) {
+                        $('#header').addClass('active')
+                    } else {
+                        $('#header').removeClass('active')
+                    }
+                },
+            });
+            
+       
         });
 
     </script>
