@@ -437,6 +437,19 @@ img {
   margin-bottom: 60px;
 }
 
+#_banner.active .banner-txt1 {
+  animation: fadeInUp 1s;
+}
+
+#_banner.active .banner-txt2 {
+  animation: fadeInUp 1s;
+}
+
+#_banner.active .banner-txt3 {
+  animation: fadeInUp 1s;
+  animation-delay: 0.3;
+}
+
 .margin-left20 {
   margin-left: 20px;
 }
@@ -471,6 +484,7 @@ img {
 #_menber .flex-about li {
   width: 19%;
   font-size: 13px;
+  opacity: 0;
 }
 
 #_about .about-num-item,
@@ -596,6 +610,43 @@ img {
   animation: bounceInRight 1s;
 }
 
+#_about.active h2 {
+  animation: fadeInUp 1s;
+}
+
+#_about.active .about-desc {
+  animation: fadeInUp 1s;
+  animation-delay: 0.3;
+}
+
+#_about.active .flex-about li {
+  opacity: 1;
+}
+
+#_about.active .flex-about li:first-child {
+  animation: fadeInUp 1s;
+  animation-delay: 0.1s;
+}
+
+#_about.active .flex-about li:nth-child(2) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.2s;
+}
+
+#_about.active .flex-about li:nth-child(3) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.3s;
+}
+
+#_about.active .flex-about li:nth-child(4) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.4s;
+}
+
+#_about.active .btn-group {
+  animation: fadeInUp 1s;
+}
+
 .btn-group a {
   display: inline-block;
   width: 150px;
@@ -618,6 +669,8 @@ img {
 
 #_item .item {
   width: 25%;
+  opacity: 0;
+  transition: .3s linear all;
 }
 
 #_item .item-title {
@@ -647,8 +700,33 @@ img {
   background: transparent;
 }
 
+#_item.active .item {
+  opacity: 1;
+}
+
+#_item.active .item0 {
+  animation: fadeIn 1s;
+}
+
+#_item.active .item1 {
+  animation: fadeIn 1s;
+}
+
+#_item.active .item2 {
+  animation: fadeIn 1s;
+}
+
+#_item.active .item3 {
+  animation: fadeIn 1s;
+}
+
 .max660 {
   max-width: 660px;
+}
+
+#_menber .menber-img {
+  opacity: 0;
+  transition: .3s linear all;
 }
 
 #_menber .menber-bg {
@@ -675,6 +753,7 @@ img {
   flex-wrap: nowrap;
   padding: 15px 0;
   cursor: pointer;
+  opacity: 0;
 }
 
 #_menber .menber-flex li:hover .m-desc {
@@ -693,6 +772,55 @@ img {
   padding-top: 10px;
   width: 40px;
   flex-shrink: 0;
+}
+
+#_menber .btn-group {
+  opacity: 0;
+}
+
+#_menber.active .menber-img {
+  opacity: 1;
+  animation: fadeInUp 1s;
+}
+
+#_menber.active h2 {
+  animation: fadeInUp 1s;
+  animation-delay: 0.1s;
+}
+
+#_menber.active .about-desc {
+  animation: fadeInUp 1s;
+  animation-delay: 0.1s;
+}
+
+#_menber.active .menber-flex li {
+  opacity: 1;
+}
+
+#_menber.active .menber-flex li:first-child, #_menber.active .menber-flex li:nth-child(2) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.2s;
+}
+
+#_menber.active .menber-flex li:nth-child(3), #_menber.active .menber-flex li:nth-child(4) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.3s;
+}
+
+#_menber.active .menber-flex li:nth-child(5), #_menber.active .menber-flex li:nth-child(6) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.4s;
+}
+
+#_menber.active .menber-flex li:nth-child(7), #_menber.active .menber-flex li:nth-child(8) {
+  animation: fadeInUp 1s;
+  animation-delay: 0.5s;
+}
+
+#_menber.active .btn-group {
+  opacity: 1;
+  animation: fadeInUp 1s;
+  animation-delay: 0.4s;
 }
 
 #_news {
@@ -804,6 +932,24 @@ img {
 .btn-next-prev span:hover a {
   background: #0a5281;
   color: #fff;
+}
+
+#_news.active h2 {
+  animation: fadeInUp 1s;
+}
+
+#_news.active .news-box {
+  animation: fadeInUp 1s;
+}
+
+#_news.active .btn-next-prev {
+  animation: fadeInUp 1s;
+  animation-delay: 0.2s;
+}
+
+#_news.active .btn-group {
+  animation: fadeInUp 1s;
+  animation-delay: 0.4s;
 }
 
 footer {
