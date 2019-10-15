@@ -21,7 +21,7 @@
   #_item .paddingt65 { padding-top: 65px; height: 100%; }
   #_item .item { width: 50%; }
   #_item .item-more { bottom: 20px; top: auto; font-size: 13px; }
-  #_item .item-title { font-size: 20px; }
+  #_item .item-title { font-size: 20px; padding-top: 0; }
   #_menber .icon { width: 35px; }
   #_menber .padding40 { padding: 15px; }
   #_menber .cn { font-size: 14px; }
