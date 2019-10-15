@@ -100,15 +100,11 @@ img { max-width: 100%; border: none; }
 
 .header nav ul li { height: 122px; }
 
-.header nav ul li a { display: block; height: 100%; display: flex; align-items: center; padding: 0 5px; position: relative; transition: 0.3s linear all; }
-
-.header nav ul li a::after { display: block; width: 0; bottom: -1px; left: 0; height: 1px; background: #0a5281; display: block; content: ""; position: absolute; transition: 0.2s linear all; }
+.header nav ul li a { height: 100%; display: flex; align-items: center; padding: 0 5px; position: relative; transition: 0.3s linear all; }
 
 .header:hover, .header.active, .headactive .header { background: rgba(255, 255, 255, 0.88); color: #0a5281; }
 
 .header:hover a, .header.active a, .headactive .header a { color: #0a5281; }
-
-.header:hover nav ul li a:hover::after, .header.active nav ul li a:hover::after, .headactive .header nav ul li a:hover::after { width: 100%; }
 
 .header:hover .logo1, .header.active .logo1, .headactive .header .logo1 { display: none; }
 

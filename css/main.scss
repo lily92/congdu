@@ -213,7 +213,6 @@ img {
     li {
       height: 122px;
       a {
-        display: block;
         height: 100%;
         display: flex;
         align-items: center;
@@ -221,18 +220,18 @@ img {
         position: relative;
         transition: 0.3s linear all;
       }
-      a::after {
-        display: block;
-        width: 0;
-        bottom: -1px;
-        left: 0;
-        height: 1px;
-        background: $colorb;
-        display: block;
-        content: "";
-        position: absolute;
-        transition: 0.2s linear all;
-      }
+      // a::after {
+      //   display: block;
+      //   width: 0;
+      //   bottom: -1px;
+      //   left: 0;
+      //   height: 1px;
+      //   background: $colorb;
+      //   display: block;
+      //   content: "";
+      //   position: absolute;
+      //   transition: 0.2s linear all;
+      // }
     }
   }
 }
@@ -243,9 +242,9 @@ img {
   a {
     color: $colorb;
   }
-  nav ul li a:hover::after {
-    width: 100%;
-  }
+  // nav ul li a:hover::after {
+  //   width: 100%;
+  // }
   .logo1 {
     display: none;
   }
