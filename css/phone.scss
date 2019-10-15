@@ -202,7 +202,7 @@ $colorb: #0a5281;
   }
   .search-close{ line-height: 30px; color: #fff; font-size: 20px;}
 
-  .flex-nav{position: fixed; left: 0; top: 0;  height: 100%; width: 100%; background: #0a5281; padding-top: 60px;  z-index: 2;
+  .flex-nav{position: fixed; left: 0; top: 0;  height: 100%; width: 100%; background: #0a5281; padding-top: 60px;  z-index: 2; transition: .3s linear all;
     transform: translateX(100%);
     a{ color: #fff;}
     dt{ padding:  0 0 0 20px;line-height: 45px; border-bottom: 1px solid #1872ae}
