@@ -305,7 +305,10 @@ img {
     font-size: 13px;
   }
 }
+
+
 #_banner {
+  z-index: 6;
   .banner-more {
     display: inline-block;
     width: 140px;
@@ -341,11 +344,11 @@ img {
   .banner-txt2{ font-size: 76px; border-bottom: 1px solid $colorf; padding-bottom: 60px; margin-bottom: 60px;}
 }
 #_banner.active {
-  .banner-txt1{ animation: fadeInUp 1s}
-  .banner-txt2{ animation: fadeInUp 1s}
-  .banner-txt3{ animation: fadeInUp 1s; animation-delay: 0.3;}
+  .banner-txt{ animation: fadeInUp 2s}
+  
 }
 .margin-left20{ margin-left: 20px;}
+#_about{ z-index: 5;}
 #_about,
 #_menber {
   align-items: center;
@@ -361,7 +364,7 @@ img {
     align-items: center;
   }
   .flex-about{ justify-content: space-between; margin-bottom: 60px;}
-  .flex-about li{ width: 19%; font-size: 13px; opacity: 0;}
+  .flex-about li{ width: 19%; font-size: 13px; }
   .about-num-item {
     height: 60px;
     border-bottom: 1px solid #eee;
@@ -425,17 +428,21 @@ img {
 
 }
 
-#_about.active {
-  .about-video-bg{ animation: bounceInRight 1s}
-  h2{animation: fadeInUp 1s}
-  .about-desc{animation: fadeInUp 1s;animation-delay: 0.3;}
-  .flex-about li{ opacity: 1;}
-  .flex-about li:first-child{animation: fadeInUp 1s;animation-delay: 0.1s;}
-  .flex-about li:nth-child(2){animation: fadeInUp 1s;animation-delay: 0.2s;}
-  .flex-about li:nth-child(3){animation: fadeInUp 1s;animation-delay: 0.3s;}
-  .flex-about li:nth-child(4){animation: fadeInUp 1s;animation-delay: 0.4s;}
-  .btn-group{animation: fadeInUp 1s;}
+#_about.active{
+  .about-ani{ animation: fadeInUp 1s}
 }
+
+// #_about.active {
+//   .about-video-bg{ animation: bounceInRight 1s}
+//   h2{animation: fadeInUp 1s}
+//   .about-desc{animation: fadeInUp 1s;animation-delay: 0.3;}
+//   .flex-about li{ opacity: 1;}
+//   .flex-about li:first-child{animation: fadeInUp 1s;animation-delay: 0.1s;}
+//   .flex-about li:nth-child(2){animation: fadeInUp 1s;animation-delay: 0.2s;}
+//   .flex-about li:nth-child(3){animation: fadeInUp 1s;animation-delay: 0.3s;}
+//   .flex-about li:nth-child(4){animation: fadeInUp 1s;animation-delay: 0.4s;}
+//   .btn-group{animation: fadeInUp 1s;}
+// }
 
 .btn-group {
   a {
@@ -457,9 +464,10 @@ img {
 }
 
 #_item {
+  z-index: 4;
   .paddingt65{ height: 100%;}
   .item {
-    width: 25%; opacity: 0; transition: .3s linear all;
+    width: 25%; transition: .3s linear all;
   }
   .item-title {
     font-size: 37px;
@@ -483,17 +491,15 @@ img {
   }
 }
 #_item.active{
-  .item{ opacity: 1;}
-  .item0{animation: fadeIn 1s;}
-  .item1{animation: fadeIn 1s;}
-  .item2{animation: fadeIn 1s;}
-  .item3{animation: fadeIn 1s;}
+  .item-ani{animation: fadeInUp 1s;}
+  
 }
 .max660 {
   max-width: 660px;
 }
 #_menber {
-  .menber-img{ opacity: 0; transition: .3s linear all;}
+  z-index: 2;
+  .menber-img{ opacity: 1; transition: .3s linear all;}
   .menber-bg {
     background: url(../images/m-icon88.png) no-repeat right bottom;
     background-size: 60%;
@@ -511,7 +517,7 @@ img {
       flex-wrap: nowrap;
       padding: 15px 0;
       cursor: pointer;
-      opacity: 0;
+     
     }
     li:hover  .m-desc{ transform: scale(1.2) translateX(15px)}
   }
@@ -526,22 +532,14 @@ img {
     width: 40px;
     flex-shrink: 0;
   }
-  .btn-group{ opacity: 0;}
 }
 #_menber.active{
-  .menber-img{ opacity: 1; animation: fadeInUp 1s;}
-  h2{animation: fadeInUp 1s;animation-delay: 0.1s;}
-  .about-desc{animation: fadeInUp 1s;animation-delay: 0.1s;}
-  .menber-flex li{ opacity: 1;}
-  .menber-flex li:first-child,.menber-flex li:nth-child(2){ animation: fadeInUp 1s;animation-delay: 0.2s;}
-  .menber-flex li:nth-child(3),.menber-flex li:nth-child(4){ animation: fadeInUp 1s;animation-delay: 0.3s;}
-  .menber-flex li:nth-child(5),.menber-flex li:nth-child(6){ animation: fadeInUp 1s;animation-delay: 0.4s;}
-  .menber-flex li:nth-child(7),.menber-flex li:nth-child(8){ animation: fadeInUp 1s;animation-delay: 0.5s;}
-  .btn-group{ opacity: 1;animation: fadeInUp 1s;animation-delay: 0.4s;}
+  .menber-img,.menber-bg{animation: fadeInUp 1s;}
 
 }
 
 #_news {
+  z-index: 1;
   background: url(../images/index-news.jpg) no-repeat center top;
   padding-top: 123px;
   .news {
@@ -610,6 +608,9 @@ img {
     padding: 30px 0;
   }
 }
+#_news.active{
+  .news{animation: fadeInUp 1s;}
+}
 .new-right {
   width: 38px;
   height: 38px;
@@ -636,12 +637,12 @@ img {
 .btn-next-prev span:hover a {
   background: $colorb; color: $colorf
 }
-#_news.active{
-  h2{animation: fadeInUp 1s}
-  .news-box{animation: fadeInUp 1s}
-  .btn-next-prev{animation: fadeInUp 1s;animation-delay: 0.2s;}
-  .btn-group{animation: fadeInUp 1s;animation-delay: 0.4s;}
-}
+// #_news.active{
+//   h2{animation: fadeInUp 1s}
+//   .news-box{animation: fadeInUp 1s}
+//   .btn-next-prev{animation: fadeInUp 1s;animation-delay: 0.2s;}
+//   .btn-group{animation: fadeInUp 1s;animation-delay: 0.4s;}
+// }
 
 
 footer {
