@@ -10,8 +10,33 @@
   $(document).ready(function () {
     $("#_header").on("click", ".hamburger", function () {
       $(this).toggleClass("is-active");
-      $('.nav-mobile').toggleClass('active')
+      $('.nav-mobile,.flex-nav').toggleClass('active')
     });
+
+    $("#_header").on("click", ".show-menu", function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('.show-menu').text('+');
+        $(this).text('-');
+        $(this).parent().parent().parent().find('dd').stop().slideUp();
+        $(this).parent().parent().find('dd').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('dd').stop().slideUp();
+      }
+    });
+
+
+    $('.show-menu').click(function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('.show-menu').text('+');
+        $(this).text('-');
+        $(this).parent().parent().parent().find('dd').stop().slideUp();
+        $(this).parent().parent().find('dd').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('dd').stop().slideUp();
+      }
+    })
   })
  })
 

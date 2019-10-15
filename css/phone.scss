@@ -184,7 +184,7 @@ $colorb: #0a5281;
   }
   dl {
     font-size: 14px;
-    display: none;
+    // display: none;
   }
   dl dd {
     line-height: 40px;
@@ -201,6 +201,20 @@ $colorb: #0a5281;
     .phone-search{ display: flex; width: 100%; margin: 15px 0; padding:15px 0 15px 15px; background: none;}
   }
   .search-close{ line-height: 30px; color: #fff; font-size: 20px;}
+
+  .flex-nav{position: fixed; left: 0; top: 0;  height: 100%; width: 100%; background: #0a5281; padding-top: 60px;  z-index: 2;
+    transform: translateX(100%);
+    a{ color: #fff;}
+    dt{ padding:  0 0 0 20px;line-height: 45px; border-bottom: 1px solid #1872ae}
+    dd{ display: none;}
+    dd .text-center{ text-align: left; padding: 0 0 0 40px;}
+    dd li{ line-height: 35px; border-bottom: 1px solid #1872ae;}
+    li a{ padding-left: 40px;}
+    .show-menu{ width: 45px; height: 45px; line-height: 45px; text-align: center; color: #fff; border-left: 1px solid #1872ae; cursor: pointer;}
+  }
+  .flex-nav.active {
+    transform: translate(0);
+  }
 /*end nav*/  
 .header .logo{ width: 100px}  
 
