@@ -1025,6 +1025,11 @@ img {
   transform: scale(0.8);
 }
 
+.f-btn:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
 footer {
   padding: 50px 0;
   background: #0a5281;
