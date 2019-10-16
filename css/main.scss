@@ -494,7 +494,7 @@ img {
     color: $colorf;
   }
   .item-more:hover{ color: $colorb;}
-  .item:hover{ width: 27%;}
+  .item:hover{transform: scale(1.03); position: relative; z-index: 2; width: 27%;}
   .item:hover .item-master {
     background: rgba(0, 0, 0, 0);
   }
@@ -536,7 +536,7 @@ img {
     li:hover  .m-desc{ transform: scale(1.2) translateX(15px)}
   }
   .cn {
-    font-size: 18px;
+    font-size: 21px;
   }
   .en {
     font-size: 16px;
@@ -736,9 +736,10 @@ footer {
 /*about*/
 .fon30{ font-size: 30px;}
 .color45{ color: #45525a;}
-.margin-b40{ margin-bottom: 40px;}
+.margin-b40{ margin-bottom: 30px;}
 .ny-container{
   margin: -125px auto 0; position: relative; display: flex; align-items: flex-start;
+  .main-container .fon20{ font-size: 16px;}
   .slider{ width: 270px;box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09); padding: 50px 0 50px 50px;  background: $colorf; margin-top: 40px;}
   h2{ font-size: 25px; border-bottom: 1px solid #ede7e0; font-weight: normal; color: $colorb; padding-bottom: 15px;}
   .slider-list{
@@ -764,7 +765,7 @@ footer {
   .main-con{ width:calc(100% - 70px); background: #fff; background-size:cover;padding: 60px 90px 120px 90px; position: relative;  z-index: 2;
      h3{ font-size: 37px; color:#39444a; font-weight: normal; position: relative;}
      h3::before{ display: block; content: '';  width: 12px; height: 4px; background:#39444a ;left: -20px;  position: absolute; top: 50%; transform: translateY(-50%);}
-     .menu{ font-size: 12px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px; color: #78848b;
+     .menu{ font-size: 14px; padding-bottom: 30px; border-bottom: 1px solid $colorb; margin-bottom: 30px; color: #78848b;
      a{ color: #78848b;}
     }
      
