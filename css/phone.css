@@ -117,6 +117,7 @@
   .ganyu-item .pading60 { padding: 0 20px; }
   /*内页*/
   .ny-container .main-con h3::before { display: none; }
+  .ny-container .main-con.menber-con { padding-right: 15px; }
   .new-list1 li { margin-top: 30px; }
   .new-list1 .new-img { width: 100%; background: #eee; }
   .new-list1 .new-con { width: 100%; padding: 10px; }
@@ -124,7 +125,7 @@
   .new-list1 .date { padding: 10px 0; margin-bottom: 10px; }
   .new-list1 .news-desc { margin-bottom: 10px; }
   .menber-item .ny-container { margin-left: 35px; }
-  .menber-item .ny-container .main-con { padding-left: 25px; padding-top: 0; }
+  .menber-item .ny-container .main-con { padding-left: 25px; padding-top: 0; padding-right: 15px; }
   .margin-t { margin-top: 30px !important; }
   .menber-item h1 { padding-left: 30px; font-size: 1.6em; }
   .menber-item .dots { width: 50px; height: 50px; left: -20%; top: -12%; }
@@ -145,4 +146,5 @@
   .main-con-news .new-date-list li { margin: 0 5px; }
   .main-con-newsd h4 { font-size: 16px; padding: 10px 0; }
   /*flex2*/
-  .flex2 li { width: 100%; } }
+  .flex2 li { width: 100%; }
+  .btn-top { right: 20px; bottom: 30px; } }

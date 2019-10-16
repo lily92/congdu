@@ -254,6 +254,7 @@ $colorb: #0a5281;
 }
 /*内页*/ 
 .ny-container .main-con h3::before{ display: none;}
+.ny-container .main-con.menber-con{ padding-right: 15px}
 .new-list1{
   li{ margin-top: 30px;}
   .new-img{ width: 100%; background: #eee;}
@@ -265,7 +266,7 @@ $colorb: #0a5281;
 }
 .menber-item{
   .ny-container{ margin-left: 35px}
-  .ny-container .main-con{padding-left: 25px; padding-top: 0;}
+  .ny-container .main-con{padding-left: 25px; padding-top: 0; padding-right: 15px}
 }
 .margin-t{ margin-top: 30px !important}
 .menber-item {
@@ -308,4 +309,5 @@ $colorb: #0a5281;
 .flex2{
   li{ width:100%;}
 }
+.btn-top{ right: 20px; bottom: 30px}
 }
