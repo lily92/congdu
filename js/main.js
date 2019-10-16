@@ -1,8 +1,4 @@
 $(function () {
-  $('#_header').load("header.html", "", function (response, status, request) {
-    $('#_header').html(response);
-    callback();
-  });
 
   $('.footers').load("footer.html", "", function (response, status, request) {
     $(this).html(response);
@@ -40,11 +36,17 @@ $(function () {
 
     /** pc hover */
     $("#_header").on("mouseenter", ".nav-right li", function () {
-      console.log($('nav').width())
-      var nav_w = $('nav').width()
       $('.nav-line').attr('class','nav-line line'+$(this).index())
     });
 
   })
 })
+
+function loadHeader(index){
+  $('#_header').load("header.html", "", function (response, status, request) {
+    $('#_header').html(response);
+    $('.nav-line').attr('class','nav-line line'+index+'')
+    $(".nav-right li:eq("+index+")").addClass('active')
+  });
+}
 

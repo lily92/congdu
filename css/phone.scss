@@ -239,7 +239,7 @@ $colorb: #0a5281;
     
   }
   .main-con{ padding: 20px 15px; width: 100%; margin-top: 0; z-index: 1;
-    h3{ font-size: 25px;}
+    h3{ font-size: 20px;}
     .menu{  padding-bottom: 10px; margin-bottom: 10px; }
   }
 }
@@ -280,7 +280,7 @@ $colorb: #0a5281;
 .menber-list {
   li{ margin-top: 25px; width: 22%;}
   li:nth-child(4n)::after,li:nth-child(4n)::before{ display: none}
-  .number{ font-size: 14px;}
+  .number{ font-size: 14px; line-height: 1;}
   .menber-tit{ font-size: 12px;}
 }
    
@@ -294,10 +294,12 @@ $colorb: #0a5281;
   li{
     width: 100%;
   }
- 
 }
 
 .main-con-news{
   .new-date-list li{margin: 0 5px;}
+}
+.main-con-newsd{ 
+  h4{ font-size:16px; padding: 10px 0;}
 }
 }

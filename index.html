@@ -212,7 +212,6 @@
         </div>
         <!-- end _item -->
 
-
         <!-- menber -->
         <div class="section flex" id="_menber">
             <div class="w50 positionr h100 hv100 hidden-xs menber-img"
@@ -321,7 +320,7 @@
                 <!-- Swiper -->
                 <div class="swiper-container w100 news-box">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <a class="swiper-slide" href="newsd.html">
                             <div class="shodow">
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
@@ -338,11 +337,11 @@
                                         <p class="nowarp title">从都生命健康管理 ，起步即与世界同步</p>
                                         <p class="nowarp desc">2018年7月11号，从都整合健康管理国际论坛暨从都</p>
                                     </div>
-                                    <a href="" class="after">详情</a>
+                                    <span class="after">详情</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
+                        </a>
+                        <a class="swiper-slide" href="newsd.html">
                             <div class="shodow">
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
@@ -359,11 +358,11 @@
                                         <p class="nowarp title">习近平会见出席“2018从都国际论坛”外方嘉宾</p>
                                         <p class="nowarp desc">国家主席习近平12日在人民大会堂会见出席“2018从都国际论坛”外方嘉宾。习近平着重介绍了</p>
                                     </div>
-                                    <a href="" class="after">详情</a>
+                                    <span class="after">详情</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
+                        </a>
+                        <a class="swiper-slide" href="newsd.html">
                             <div class="shodow">
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
@@ -380,10 +379,10 @@
                                         <p class="nowarp title">从都生命健康管理医院-期项目验收报告</p>
                                         <p class="nowarp desc">及环境保护工作组竣工意见</p>
                                     </div>
-                                    <a href="" class="after">详情</a>
+                                    <span class="after">详情</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
 
                     </div>
@@ -421,6 +420,7 @@
 
     <script type="text/javascript">
         $(function () {
+            loadHeader(0)
             var myFullpage = new fullpage('#fullpage', {
                 fixedElements: '#header',
                 verticalCentered: false,//设置内容不垂直居中
@@ -509,6 +509,7 @@
         });
 
     </script>
+     
 
     <!--end container-->
 
