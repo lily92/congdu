@@ -749,7 +749,7 @@ footer {
 #fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 100% ; border-radius: 0; background: #c0a88c; display: block;}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px; margin: 0 0 0 -2px;  border-radius: 0; background: $colorb; height: 100%; margin-top: -23px;}
 
-.btn-top{ bottom: 80px; cursor: pointer; right: 50px; width:60px; height:60px; background: url(../images/background-t2.png)  no-repeat center; z-index:1; position: fixed; display: none;}
+.btn-top{ bottom: 80px; cursor: pointer; right: 50px; width:60px; height:60px; background: url(../images/background-t2.png)  no-repeat center; z-index:2; position: fixed; display: none;}
 .btn-top.active{ background: url(../images/background-t.png)  no-repeat center;}
 .btn-top:hover{ animation: bounceIn 0.5s}
 /*内页*/

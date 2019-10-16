@@ -19,7 +19,12 @@ $(function () {
   $(document).ready(function () {
     $("#_header").on("click", ".hamburger", function () {
       $(this).toggleClass("is-active");
-      $('.nav-mobile,.flex-nav').toggleClass('active')
+      $('.nav-mobile,.flex-nav').toggleClass('active');
+      if($(this).hasClass('is-active')){
+        $('.btn-top').css('z-index','1')
+      }else{
+        $('.btn-top').css('z-index','2')
+      }
     });
 
     $("#_header").on("click", ".show-menu", function () {
@@ -45,6 +50,18 @@ $(function () {
         $(this).parent().parent().find('dd').stop().slideUp();
       }
     })
+
+    $("#_header").on("click", ".trd", function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('ul').stop().slideUp();
+        $(this).parent().parent().parent().find('.trd').text('+');
+        $(this).text('-');
+        $(this).parent().parent().find('ul').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('ul').stop().slideUp();
+      }
+    });
 
     /** pc hover */
     $("#_header").on("mouseenter", ".nav-right li", function () {
