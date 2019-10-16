@@ -241,6 +241,7 @@ img {
       //   transition: 0.2s linear all;
       // }
     }
+    li.active a{ font-weight: bold;}
   }
 }
 .header:hover,
@@ -536,7 +537,7 @@ img {
       cursor: pointer;
      
     }
-    li:hover  .m-desc{ transform: scale(1.2) translateX(15px)}
+    li:hover  .m-desc{ transform: scale(1.1) translateX(15px)}
   }
   .cn {
     font-size: 21px;

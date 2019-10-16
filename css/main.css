@@ -311,6 +311,10 @@ img {
   transition: 0.3s linear all;
 }
 
+.header nav ul li.active a {
+  font-weight: bold;
+}
+
 .header:hover,
 .header.active, .headactive .header {
   background: rgba(255, 255, 255, 0.88);
@@ -793,7 +797,7 @@ img {
 }
 
 #_menber .menber-flex li:hover .m-desc {
-  transform: scale(1.2) translateX(15px);
+  transform: scale(1.1) translateX(15px);
 }
 
 #_menber .cn {

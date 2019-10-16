@@ -1,6 +1,7 @@
 $(function () {
   $('#_header').load("header.html", "", function (response, status, request) {
     $('#_header').html(response);
+    callback();
   });
 
   $('.footers').load("footer.html", "", function (response, status, request) {
