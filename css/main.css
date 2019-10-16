@@ -470,6 +470,32 @@ img {
   animation: fadeInUp 2s;
 }
 
+.video-master {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+}
+
+.video {
+  max-width: 1000px;
+  width: 90%;
+  background: #000;
+  animation-delay: 1.5s;
+}
+
+.close-btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+}
+
 .margin-left20 {
   margin-left: 20px;
 }
@@ -666,6 +692,7 @@ img {
   transition: .3s linear all;
   opacity: 0;
   transition: .3s linear all;
+  background-size: cover !important;
 }
 
 #_item .item-title {
@@ -1235,6 +1262,21 @@ footer .link-box {
   z-index: 1;
   padding-left: 0;
   padding-right: 0;
+}
+
+/*从都论坛*/
+.join-luntan {
+  font-size: 16px;
+  line-height: 38px;
+  display: inline-block;
+  border-radius: 20px;
+  color: #0a5281;
+  border: 1px solid #0a5281;
+  padding: 0 30px;
+}
+
+.padding90 {
+  padding: 90px 0;
 }
 
 /*健康管理-整合干预*/

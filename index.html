@@ -147,7 +147,7 @@
                         <div class="about-video-bg hidden-xs">
                         </div>
                         <div class="positionb">
-                            <img src="images/index-about-img.jpg" alt="" srcset="">
+                            <img src="images/index-about-img.jpg" alt="" srcset="" id="play_video">
                             <!-- <video class="index-video" autoplay="autoplay" controls src=""
                                 poster="images/index-about-img.jpg" /> -->
                         </div>
@@ -324,9 +324,9 @@
                         <div class="swiper-slide">
                             <div class="shodow">
                                 <div class="positionr">
-                                    <img src="images/index-new-bg.jpg" alt="" srcset="">
+                                    <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/index-new-img.jpg" alt="" srcset="">
+                                        <img src="images/index-new-img.jpg" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -345,9 +345,9 @@
                         <div class="swiper-slide">
                             <div class="shodow">
                                 <div class="positionr">
-                                    <img src="images/index-new-bg.jpg" alt="" srcset="">
+                                    <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/new-img21.jpg" alt="" srcset="">
+                                        <img src="images/new-img21.jpg" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -366,9 +366,9 @@
                         <div class="swiper-slide">
                             <div class="shodow">
                                 <div class="positionr">
-                                    <img src="images/index-new-bg.jpg" alt="" srcset="">
+                                    <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/index-new1.jpg" alt="" srcset="">
+                                        <img src="images/index-new1.jpg" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -408,6 +408,16 @@
         </div>
         <!--end  footer -->
     </div>
+    <div class="video-master animated slideInRight flex flex-center">
+        <img src="images/btn-close.png" alt="" srcset="" class="close-btn" >
+        <video
+          class="animated flipInX video"
+          autoplay="autoplay"
+          controls
+          src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+          poster="images/index-about-img.jpg"
+        />
+      </div>
 
     <script type="text/javascript">
         $(function () {
@@ -457,7 +467,6 @@
                     }
                 },
             });
-
             var swiper_news = new Swiper('.news-box', {
                 slidesPerView: 3,
                 spaceBetween: 25,
@@ -486,6 +495,17 @@
                     },
                 }
             });
+           
+           $('.play-icon').click(function (e) { 
+               e.preventDefault();
+               $('.video-master').css('display','flex')
+               
+           });
+            $('.close-btn').click(function (e) { 
+                e.preventDefault();
+                $('.video-master').css('display','none')
+            });
+      
         });
 
     </script>
