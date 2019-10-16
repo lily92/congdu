@@ -36,8 +36,9 @@ ol,
 ul {
   list-style: none;
 }
+span{ outline: none;}
 a {
-  color: $color3;
+  color: $color3; text-decoration: none; outline: none;
 }
 a:hover {
   text-decoration: none;
@@ -118,6 +119,7 @@ img {
 .fon14 {
   font-size: 14px;
 }
+.fon15{ font-size: 15px;}
 .fon12 {
   font-size: 12px;
 }
@@ -368,6 +370,7 @@ img {
     font-size: 40px;
     font-weight: normal;
     border-bottom: 2px solid $colorb;
+    padding-bottom: 10px;
   }
   .about-describe {
     display: flex;
@@ -383,7 +386,7 @@ img {
   }
   .about-num-item:hover{ animation: bounceIn 1s ;}
   .about-desc {
-    padding: 15px 0;
+    padding: 15px 0 30px 0;
   }
   .about-num {
     margin-bottom: 60px;
@@ -397,7 +400,7 @@ img {
     bottom: 0;
     right: 15%;
     height: 48%;
-    background: rgba(66, 119, 157, 0.78);
+    background: rgba(66, 119, 157, 0.85);
     padding: 40px 10px 40px 40px;
     color: $colorf;
   }
@@ -505,10 +508,10 @@ img {
 }
 #_item.active{
   // .item-ani{animation: fadeInDown 1s;}
-  .item.item0 {animation: fadeIn 1s;animation-delay: 0.5s; animation-fill-mode: forwards; }
-  .item.item1 {animation: fadeIn 1s; animation-delay: 1.5s; animation-fill-mode: forwards; }
-  .item.item2 {animation: fadeIn 1s; animation-delay: 2.5s;  animation-fill-mode: forwards;}
-  .item.item3 {animation: fadeIn 1s; animation-delay: 3.5s; animation-fill-mode: forwards; }
+  .item.item0 {animation: fadeIn 1s;animation-fill-mode: forwards; }
+  .item.item1 {animation: fadeIn 1s;  animation-fill-mode: forwards; }
+  .item.item2 {animation: fadeIn 1s;   animation-fill-mode: forwards;}
+  .item.item3 {animation: fadeIn 1s;  animation-fill-mode: forwards; }
   // .item{ opacity: 1;}
   
 }
@@ -525,14 +528,14 @@ img {
     justify-content: center;
   }
   .padding40 {
-    padding: 123px 20px 0;
+    padding: 63px 20px 0;
   }
  
   .cn {
-    font-size: 21px;
+    font-size: 19px;
   }
   .en {
-    font-size: 16px;
+    font-size: 15px;
   }
   .icon {
     padding-top: 10px;
@@ -583,7 +586,12 @@ img {
     transition: 300ms;
     transform: scale(0.8);
     height: auto;
+    border-radius:10px; overflow: hidden;
   }
+  .swiper-slide .positionr::after{ display: block; content: ''; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.2); position: absolute;  left: 0; top: 0;}
+  .swiper-slide img{ border-radius: 5px;}
+  .swiper-slide-active{ border-radius: 20px;}
+  .swiper-slide-active .positionr::after{  background: none;}
   .shodow {
     box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.1);
   }
@@ -623,10 +631,11 @@ img {
     margin-left: 15px;
     text-align: left;
   }
-
-  .btn-next-prev {
-    // padding: 30px 0;
+  .btn-next-prev a{-webkit-tap-highlight-color:rgba(0,0,0,0);  text-decoration: none !important;outline: none;}
+  .btn-next-prev  span{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);  outline: none;
   }
+  
 }
 #_news.active{
   .news{animation: fadeInDown 1s;}
@@ -739,35 +748,42 @@ footer {
 #fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 2px; height: 100% ; border-radius: 0; background: #c0a88c; display: block;}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{ width: 2px; margin: 0 0 0 -2px;  border-radius: 0; background: $colorb; height: 100%; margin-top: -23px;}
 
-
-
+.btn-top{ bottom: 80px; cursor: pointer; right: 50px; width:60px; height:60px; background: url(../images/background-t2.png)  no-repeat center; z-index:1; position: fixed; display: none;}
+.btn-top.active{ background: url(../images/background-t.png)  no-repeat center;}
+.btn-top:hover{ animation: bounceIn 0.5s}
 /*内页*/
 /*about*/
 .fon30{ font-size: 30px;}
-.color45{ color: #45525a;}
+.color45{ color: #45525a;} 
 .margin-b40{ margin-bottom: 30px;}
 .ny-container{
   margin: -125px auto 0; position: relative; display: flex; align-items: flex-start;
   .main-container .fon20{ font-size: 16px;}
-  .slider{ width: 270px;box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09); padding: 50px 0 50px 50px;  background: $colorf; margin-top: 40px;}
+  .slider{ width: 270px;box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09); padding: 50px 0 50px 40px;  background: $colorf; margin-top: 40px;}
   h2{ font-size: 25px; border-bottom: 1px solid #ede7e0; font-weight: normal; color: $colorb; padding-bottom: 15px;}
   .slider-list{
     li{
-      a{ padding: 20px 0; color: #b09476;  display: block; position: relative; padding-left: 25px; border-bottom: 1px solid #ede7e0; transition: .3s linear all; }
+      a{ padding: 20px 0; text-decoration: none; color: #b09476;  display: block; position: relative; padding-left: 25px; border-bottom: 1px solid #ede7e0; transition: .3s linear all; }
       dl{ display: none;}
-      
       a::before{ width: 3px; height: 20px; display: block; content: ''; position: absolute; left: 15px; background: #b09476;}
       a.first:hover,a.first.cur{ background: #0c5281; color: $colorf;}
       a.first:hover::before,a.first.cur::before{  background: $colorf;}
-      .is-submenu{ background: url(../images/s-iconup.png) no-repeat right center; padding-right: 20px;}
-      dl a{margin-left: 26px; padding-left: 15px; font-size: 14px; color: $colorb; font-weight: bold;}
-      dd a{ font-weight: normal;}
-      dt a::before{ width:11px; height: 3px; background: $colorb; top: 50%; transform: translateY(-50%); left: 0;}
-      dd a::before{ display: none;}
+      a span{ background: url(../images/icon-r.png) no-repeat right center; padding-right: 20px;}
+      dl a{margin-left: 10px; padding-left: 15px; font-size: 14px; color: $colorb; font-weight: bold;}
+       dd a{ font-weight: normal;}
+       dd a::before{ display: none;}
+       dd.cur a{ font-weight: bold;}
+       dd.cur a::before,dd:hover a::before { width:11px; height: 3px; background: $colorb; top: 50%; transform: translateY(-50%); left: 0; display: block}
+       
+     
     }
-    li.active{
-      dl{ display: block;}
-    }
+    li.active a span{ background: url(../images/s-iconup.png) no-repeat right center;}
+    li.active a.first{ background: #0c5281; color: $colorf;}
+    li.active  a::before{ background: $colorf;}
+    li.active  dd.cur a::before{ background: $colorb;}
+    // li.active{
+    //   dl{ display: block;}
+    // }
   }
   // box-shadow: 0 0 5px -1px  rgba($color: #000, $alpha: 0.2) ;
   .bgf{ position: relative; z-index: 2; background: #fff;}
@@ -799,17 +815,20 @@ footer {
 
 /*健康管理-整合干预*/ 
 .colorb{ color: $colorb;}
-.line5 p{ margin-bottom: 10px;}
+.line5 p{ margin-bottom: 15px;}
 .ganyu-item{
   background: #fbfbfb; padding: 25px 0 50px;
-  .item-padding270{ padding-left: 270px;}
+  .item-padding270{ padding-left: 270px;
+    ul li{ margin-bottom: 5px;}
+    .fon20{ font-size: 16px;}
+  }
   h3{ font-size: 25px; margin-top: 25px; margin-bottom: 25px;}
   .pading60{ padding:  0 60px;}
   .p-dot{ position: relative; padding-left: 15px;}
   .p-dot::after{ position: absolute; left: 0; top: 12px; display: block; content: ''; width: 7px; height: 7px; border-radius: 50%; background: $colorb;}
 }
 .ganyu-item2{ background: #fff; box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.2);}
-
+.shaicha-p p{ margin-bottom: 10px;}
 .main-con-news{
   .new-date-list{ width: 100%; padding-top: 25px; text-align: center;
    li{ display: inline-block; width: 90px; height: 28px; text-align: center; line-height: 28px; margin: 0 25px; font-size: 13px; color: $colorb; transition: .3s linear all;}
@@ -903,6 +922,11 @@ footer {
   .icon{ display: flex; align-items: center; width: 50px;}
   .cn{ font-size: 25px;}
 } 
+/*flex2*/
+.flex2{
+  justify-content: space-between; width: 100%; flex-wrap: wrap; display: flex;
+  li{ width: 48%; margin-bottom: 5px;}
+}
 
 /*end 内页*/ 
 @media (min-width: 768px) {

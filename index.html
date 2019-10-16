@@ -154,9 +154,9 @@
                         <div class="about-video-text  hidden-xs">
                             <div class="swiper-container video-desc-box">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <p class="fon14 text-left">“从都国际生命健康管理中心世界一流的技术、世界一流的服务都令我印象深刻。”</p>
-                                        <p class="text-right"><b>——联合国前秘书长潘基文</b></p>
+                                    <div class="swiper-slide fon15">
+                                        <p class=" text-left">“从都国际生命健康管理中心世界一流的技术、世界一流的服务都令我印象深刻。”</p>
+                                        <p class="text-right" ><b>——联合国前秘书长潘基文</b></p>
                                         <hr class="hr">
                                         <div>
                                             <p>“这里的一切是如此的引人入胜，所有的设施都是极美的，这里的科技也是世界
@@ -346,7 +346,7 @@
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/new-img21.jpg" alt="" srcset="" class="w100">
+                                        <img src="images/new-img21.png" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -367,7 +367,7 @@
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/index-new1.jpg" alt="" srcset="" class="w100">
+                                        <img src="images/index-new1.png" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -428,6 +428,7 @@
                 sectionsColor: ['#68b5fc', '#fff', '#fff', 'f5bdbd', 'f5b8b4','#0a5281'],
                 scrollBar: false,
                 navigation: true,//是否显示导航，默认为false
+                normalScrollElements: '.video-desc-box',//避免自动滚动，滚动时的一些元素，例如百度地图
                 scrollOverflow: false,//内容超过满屏后是否显示滚动条，true则显示滚动条，若需滚动查看内容还需要jquery.slimscroll插件的配合
                 afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
                 },
@@ -435,7 +436,7 @@
                 easing: 'easeInOutCubic',
                 afterRender: function () {
                     var swiper = new Swiper('.banner', {
-                        // autoplay: true,
+                        autoplay: true,
                         loop: true,
                         pagination: {
                             el: '.swiper-pagination-banner',

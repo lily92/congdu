@@ -33,8 +33,14 @@ ul {
   list-style: none;
 }
 
+span {
+  outline: none;
+}
+
 a {
   color: #333;
+  text-decoration: none;
+  outline: none;
 }
 
 a:hover {
@@ -135,6 +141,10 @@ img {
 
 .fon14 {
   font-size: 14px;
+}
+
+.fon15 {
+  font-size: 15px;
 }
 
 .fon12 {
@@ -519,6 +529,7 @@ img {
   font-size: 40px;
   font-weight: normal;
   border-bottom: 2px solid #0a5281;
+  padding-bottom: 10px;
 }
 
 #_about .about-describe,
@@ -554,7 +565,7 @@ img {
 
 #_about .about-desc,
 #_menber .about-desc {
-  padding: 15px 0;
+  padding: 15px 0 30px 0;
 }
 
 #_about .about-num,
@@ -576,7 +587,7 @@ img {
   bottom: 0;
   right: 15%;
   height: 48%;
-  background: rgba(66, 119, 157, 0.78);
+  background: rgba(66, 119, 157, 0.85);
   padding: 40px 10px 40px 40px;
   color: #fff;
 }
@@ -735,25 +746,21 @@ img {
 
 #_item.active .item.item0 {
   animation: fadeIn 1s;
-  animation-delay: 0.5s;
   animation-fill-mode: forwards;
 }
 
 #_item.active .item.item1 {
   animation: fadeIn 1s;
-  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
 #_item.active .item.item2 {
   animation: fadeIn 1s;
-  animation-delay: 2.5s;
   animation-fill-mode: forwards;
 }
 
 #_item.active .item.item3 {
   animation: fadeIn 1s;
-  animation-delay: 3.5s;
   animation-fill-mode: forwards;
 }
 
@@ -778,15 +785,15 @@ img {
 }
 
 #_menber .padding40 {
-  padding: 123px 20px 0;
+  padding: 63px 20px 0;
 }
 
 #_menber .cn {
-  font-size: 21px;
+  font-size: 19px;
 }
 
 #_menber .en {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 #_menber .icon {
@@ -847,6 +854,31 @@ img {
   transition: 300ms;
   transform: scale(0.8);
   height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#_news .swiper-slide .positionr::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#_news .swiper-slide img {
+  border-radius: 5px;
+}
+
+#_news .swiper-slide-active {
+  border-radius: 20px;
+}
+
+#_news .swiper-slide-active .positionr::after {
+  background: none;
 }
 
 #_news .shodow {
@@ -904,6 +936,17 @@ img {
   border-left: 1px solid #0a5281;
   margin-left: 15px;
   text-align: left;
+}
+
+#_news .btn-next-prev a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none !important;
+  outline: none;
+}
+
+#_news .btn-next-prev span {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 #_news.active .news {
@@ -1069,6 +1112,26 @@ footer .f-line p {
   margin-top: -23px;
 }
 
+.btn-top {
+  bottom: 80px;
+  cursor: pointer;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background: url(../images/background-t2.png) no-repeat center;
+  z-index: 1;
+  position: fixed;
+  display: none;
+}
+
+.btn-top.active {
+  background: url(../images/background-t.png) no-repeat center;
+}
+
+.btn-top:hover {
+  animation: bounceIn 0.5s;
+}
+
 /*内页*/
 /*about*/
 .fon30 {
@@ -1097,7 +1160,7 @@ footer .f-line p {
 .ny-container .slider {
   width: 270px;
   box-shadow: -3.734px 1.433px 5.22px 0.78px rgba(13, 41, 56, 0.09);
-  padding: 50px 0 50px 50px;
+  padding: 50px 0 50px 40px;
   background: #fff;
   margin-top: 40px;
 }
@@ -1112,6 +1175,7 @@ footer .f-line p {
 
 .ny-container .slider-list li a {
   padding: 20px 0;
+  text-decoration: none;
   color: #b09476;
   display: block;
   position: relative;
@@ -1143,13 +1207,13 @@ footer .f-line p {
   background: #fff;
 }
 
-.ny-container .slider-list li .is-submenu {
-  background: url(../images/s-iconup.png) no-repeat right center;
+.ny-container .slider-list li a span {
+  background: url(../images/icon-r.png) no-repeat right center;
   padding-right: 20px;
 }
 
 .ny-container .slider-list li dl a {
-  margin-left: 26px;
+  margin-left: 10px;
   padding-left: 15px;
   font-size: 14px;
   color: #0a5281;
@@ -1160,21 +1224,39 @@ footer .f-line p {
   font-weight: normal;
 }
 
-.ny-container .slider-list li dt a::before {
+.ny-container .slider-list li dd a::before {
+  display: none;
+}
+
+.ny-container .slider-list li dd.cur a {
+  font-weight: bold;
+}
+
+.ny-container .slider-list li dd.cur a::before, .ny-container .slider-list li dd:hover a::before {
   width: 11px;
   height: 3px;
   background: #0a5281;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-}
-
-.ny-container .slider-list li dd a::before {
-  display: none;
-}
-
-.ny-container .slider-list li.active dl {
   display: block;
+}
+
+.ny-container .slider-list li.active a span {
+  background: url(../images/s-iconup.png) no-repeat right center;
+}
+
+.ny-container .slider-list li.active a.first {
+  background: #0c5281;
+  color: #fff;
+}
+
+.ny-container .slider-list li.active a::before {
+  background: #fff;
+}
+
+.ny-container .slider-list li.active dd.cur a::before {
+  background: #0a5281;
 }
 
 .ny-container .bgf {
@@ -1301,7 +1383,7 @@ footer .f-line p {
 }
 
 .line5 p {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .ganyu-item {
@@ -1311,6 +1393,14 @@ footer .f-line p {
 
 .ganyu-item .item-padding270 {
   padding-left: 270px;
+}
+
+.ganyu-item .item-padding270 ul li {
+  margin-bottom: 5px;
+}
+
+.ganyu-item .item-padding270 .fon20 {
+  font-size: 16px;
 }
 
 .ganyu-item h3 {
@@ -1343,6 +1433,10 @@ footer .f-line p {
 .ganyu-item2 {
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.shaicha-p p {
+  margin-bottom: 10px;
 }
 
 .main-con-news .new-date-list {
@@ -1721,6 +1815,19 @@ footer .f-line p {
 
 .quanyi25 .cn {
   font-size: 25px;
+}
+
+/*flex2*/
+.flex2 {
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.flex2 li {
+  width: 48%;
+  margin-bottom: 5px;
 }
 
 /*end 内页*/
