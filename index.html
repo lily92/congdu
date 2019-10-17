@@ -148,7 +148,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w50 about-video">
+                <div class="w50 about-video hidden-xs">
                     <div class=" positionr">
                         <img src="images/index-about-img.jpg" alt="" srcset="" class="visible-hidden">
                         <div class="about-video-bg hidden-xs">
@@ -332,7 +332,7 @@
                                 <div class="positionr">
                                     <img src="images/index-new-bg.jpg" alt="" srcset="" class="w100">
                                     <div class=" positionb">
-                                        <img src="images/index-new-img.jpg" alt="" srcset="" class="w100">
+                                        <img src="images/index-new-img.png" alt="" srcset="" class="w100">
                                     </div>
                                 </div>
                                 <div class="new-desc flex">
@@ -423,7 +423,8 @@
           src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
           poster="images/index-about-img.jpg" id="video"
         />
-      </div>
+    </div>
+      <div class="index-top"></div>
 
     <script type="text/javascript">
         $(function () {
@@ -464,14 +465,17 @@
                         },
                         mousewheel: true,
                     });
-
-
                 },
                 afterLoad: function (anchorLink, section) {
                     if (section.index >= 1) {
                         $('#header').addClass('active')
                     } else {
                         $('#header').removeClass('active')
+                    }
+                    if(section.index == 5){
+                        $('.index-top').fadeIn()
+                    }else{
+                        $('.index-top').fadeOut()
                     }
                 },
             });
@@ -516,7 +520,16 @@
                 $('.video-master').css('display','none')
                 video.pause();
             });
-      
+         
+            $('.index-top').click(function (e) { 
+                console.log('aa')
+                // myFullpage.moveTo(6,0);//从1开始，slide从0开始
+                myFullpage.moveTo(1);
+                console.log('bb')
+            });
+            // myFullpage.moveTo(5)
+        
+        
         });
 
     </script>

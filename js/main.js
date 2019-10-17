@@ -65,7 +65,16 @@ $(function () {
 
     /** pc hover */
     $("#_header").on("mouseenter", ".nav-right li", function () {
-      $('.nav-line').attr('class', 'nav-line line' + $(this).index())
+        var li_con_width = $(this).width();
+        var li_width =  $(this).outerWidth();
+        var li_pad_width =( li_width - li_con_width) /2 
+        var li_index = $(this).index();
+        var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
+        var left = 0;
+        if( li_index > 0){
+          left =  li_width * (li_index-1) + li_index0_width + li_pad_width
+        }
+        $('.nav-line').css({'left':left})
     });
 
     $(window).scroll(function () {
@@ -89,11 +98,7 @@ $(function () {
         $('.btn-top').removeClass('active')
       }
     }
-
     );
-
-
-
   })
 })
 
@@ -102,15 +107,30 @@ function loadHeader(index) {
     $('#_header').html(response);
     $('.nav-line').attr('class', 'nav-line line' + index + '')
     $(".nav-right li:eq(" + index + ")").addClass('active')
+
+    /*选中*/
+    var li_con_width =$('.nav-right li:eq('+index+')').width();
+    var li_width = $('.nav-right li:eq('+index+')').outerWidth();
+    var li_pad_width =( li_width - li_con_width) /2 
+    var li_index =$('.nav-right li:eq('+index+')').index();
+    var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
+    var left = 0;
+    if( li_index > 0){
+      left =  li_width * (li_index-1) + li_index0_width + li_pad_width
+    }
+    $('.nav-line').css({'left':left})
+
   });
 }
 
 function setSilder(index, subIndex) {
-  if (subIndex) {
+  if (subIndex>=0) {
     $('.slider-list li:eq(' + index + ') ').find('dl dd:eq(' + subIndex + ')').addClass('cur')
   }
   $('.slider-list li:eq(' + index + ') ').addClass('active')
   $('.slider-list li:eq(' + index + ') ').find('dl').slideDown()
 
 }
+
+
 

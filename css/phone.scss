@@ -281,7 +281,7 @@ $colorb: #0a5281;
   
 }
 .menber-list {
-  li{ margin-top: 25px; width: 22%;}
+  li{ width: 22%; margin-bottom: 25px;}
   li:nth-child(4n)::after,li:nth-child(4n)::before{ display: none}
   .number{ font-size: 14px; line-height: 1;}
   .menber-tit{ font-size: 12px;}

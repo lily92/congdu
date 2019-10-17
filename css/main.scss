@@ -210,13 +210,13 @@ img {
     white-space: nowrap;
   }
   nav{ position: relative;}
-  .nav-line{ position: absolute; width: calc(100% / 8); display: block; content: ''; left: 0; bottom: -1px;  height: 2px ; background: $colorb; transition: .2s linear all}
-  .nav-line.line0{ left: 0;}
-  .nav-line.line1{ left: calc(16.66% - 12px);}
-  .nav-line.line2{ left: calc(33.332% );}
-  .nav-line.line3{ left: calc(49.998% );}
-  .nav-line.line4{ left: calc(68% );}
-  .nav-line.line5{ left: calc(84.66% );}
+  .nav-line{ position: absolute; width: calc(100% / 8 ); display: block; content: ''; left: 0; bottom: -1px;  height: 2px ; background: $colorb; transition: .2s linear all}
+  // .nav-line.line0{ left: 0;}
+  // .nav-line.line1{ left: calc(16.66% - 12px);}
+  // .nav-line.line2{ left: calc(33.332% );}
+  // .nav-line.line3{ left: calc(50.998% );}
+  // .nav-line.line4{ left: calc(68.5% );}
+  // .nav-line.line5{ left: calc(86% );}
   nav ul {
     flex-wrap: nowrap;
     height: 122px;
@@ -305,7 +305,7 @@ img {
   width: 50%;
 }
 .max640 {
-  max-width: 640px;
+  max-width: 645px;
 }
 .about-num {
   display: flex;
@@ -384,9 +384,13 @@ img {
     border-bottom: 1px solid #eee;
     margin-bottom: 10px;
   }
-  .about-num-item:hover{ animation: bounceIn 1s ;}
+  .about-num-item img{ display: block; transition: .2s linear all;}
+  .about-num-item img:hover{transform: scale(1.15);}
+
   .about-desc {
     padding: 15px 0 30px 0;
+    text-align-last:justify;
+    text-align: justify;
   }
   .about-num {
     margin-bottom: 60px;
@@ -401,7 +405,7 @@ img {
     right: 15%;
     height: 48%;
     background: rgba(66, 119, 157, 0.85);
-    padding: 40px 10px 40px 40px;
+    padding: 40px 10px 40px 30px;
     color: $colorf;
   }
   .about-video-bg {
@@ -433,7 +437,7 @@ img {
     height: auto;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 30px 0 0 ;
+    padding: 0 20px 0 0 ;
   }
   .swiper-scrollbar-drag{ background: rgba(255, 255, 255, 1); width: 200%; left: -50%;}
   .swiper-scrollbar{ background: rgba(255, 255, 255, 0.6);}
@@ -544,7 +548,7 @@ img {
   }
 }
 .menber-flex {
-  justify-content: space-between;
+  justify-content: space-between; margin-bottom: 20px;
   .m-desc{ transition: .3s linear all;}
   li {
     width: 48%;
@@ -589,7 +593,7 @@ img {
     border-radius:10px; overflow: hidden;
   }
   .swiper-slide .positionr::after{ display: block; content: ''; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.2); position: absolute;  left: 0; top: 0;}
-  .swiper-slide img{ border-radius: 5px;}
+  .swiper-slide img{ border-radius: 10px;}
   .swiper-slide-active{ border-radius: 20px;}
   .swiper-slide-active .positionr::after{  background: none;}
   .shodow {
@@ -751,6 +755,8 @@ footer {
 
 .btn-top{ bottom: 80px; cursor: pointer; right: 50px; width:60px; height:60px; background: url(../images/background-t2.png)  no-repeat center; z-index:2; position: fixed; display: none;}
 .btn-top.active{ background: url(../images/background-t.png)  no-repeat center;}
+.index-top{bottom: 80px; cursor: pointer; right: 50px; width:60px; height:60px; background: url(../images/background-t.png)  no-repeat center; z-index:2; position: fixed; display: none;}
+.index-top.active{ display: block;}
 .btn-top:hover{ animation: bounceIn 0.5s}
 /*内页*/
 /*about*/
@@ -774,7 +780,7 @@ footer {
        dd a{ font-weight: normal;}
        dd a::before{ display: none;}
        dd.cur a{ font-weight: bold;}
-       dd.cur a::before,dd:hover a::before { width:11px; height: 3px; background: $colorb; top: 50%; transform: translateY(-50%); left: 0; display: block}
+       dd.cur a::before,dd:hover a::before { width:11px; height: 3px; background: $colorb; top: 30px;  left: 0; display: block}
        
      
     }
@@ -812,6 +818,7 @@ footer {
 .news-con{ background: #fff; z-index: 1; padding-left: 0; padding-right: 0;}
 /*从都论坛*/
 .join-luntan{ font-size: 16px; line-height: 38px; display: inline-block; border-radius: 20px; color: $colorb; border: 1px solid $colorb; padding:  0 30px;}
+.join-luntan:hover{ background: $colorb; color: $colorf;}
 .padding90{ padding: 90px 0;}
 
 /*健康管理-整合干预*/ 
@@ -879,7 +886,7 @@ footer {
 }
 .menber-list{
   display: flex; justify-content: space-between; flex-wrap: wrap;
-  li{ width:20.01%; text-align: center; margin-top: 76px; position: relative;  background: $colorf; padding: 0 1.3%;}
+  li{ width:20.01%; text-align: center; margin-bottom: 60px; position: relative;  background: $colorf; padding: 0 1.3%;}
   li::after{ position: absolute; display: block; content: ''; width: 15px ; height: 24px; background: url(../images/line-sanjiao.png) no-repeat center; right: -22%; top: 50%; transform: translateY(-50%)}
   li::before{ display: block; content: ''; width: 130%; left: 10%; height: 1px; border-bottom: 1px dashed $colorb; top: 50%; transform: translateY(-50%); position: absolute; z-index: 1;}
   .number{ font-size: 34px; color: #aa8c6c}
@@ -1049,13 +1056,5 @@ footer {
   }
   .menber-list .number{ font-size: 20px}
   .menber-list .menber-tit{ font-size: 12px}
-
-  // .menber-list li{
-  //    width: 47%;
-  // }
-  .menber-list{
-    // li:nth-child(4n)::after,li:nth-child(4n)::before{ display: block}
-    // li:nth-child(2n)::after,li:nth-child(2n)::before{ display: none}
-  }
   .menber-list li::after{ right: -18%; background-size: 90%; background-repeat: no-repeat;}
 }
