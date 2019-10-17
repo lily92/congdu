@@ -20,10 +20,10 @@ $(function () {
     $("#_header").on("click", ".hamburger", function () {
       $(this).toggleClass("is-active");
       $('.nav-mobile,.flex-nav').toggleClass('active');
-      if($(this).hasClass('is-active')){
-        $('.btn-top').css('z-index','1')
-      }else{
-        $('.btn-top').css('z-index','2')
+      if ($(this).hasClass('is-active')) {
+        $('.btn-top').css('z-index', '1')
+      } else {
+        $('.btn-top').css('z-index', '2')
       }
     });
 
@@ -65,16 +65,16 @@ $(function () {
 
     /** pc hover */
     $("#_header").on("mouseenter", ".nav-right li", function () {
-        var li_con_width = $(this).width();
-        var li_width =  $(this).outerWidth();
-        var li_pad_width =( li_width - li_con_width) /2 
-        var li_index = $(this).index();
-        var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
-        var left = 0;
-        if( li_index > 0){
-          left =  li_width * (li_index-1) + li_index0_width + li_pad_width
-        }
-        $('.nav-line').css({'left':left})
+      var li_con_width = $(this).width();
+      var li_width = $(this).outerWidth();
+      var li_pad_width = (li_width - li_con_width) / 2
+      var li_index = $(this).index();
+      var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
+      var left = 0;
+      if (li_index > 0) {
+        left = li_width * (li_index - 1) + li_index0_width + li_pad_width
+      }
+      $('.nav-line').css({ 'left': left })
     });
 
     $(window).scroll(function () {
@@ -92,7 +92,7 @@ $(function () {
       if (documentheight - totalheight <= 200) {
         // 显示白色
         $('.btn-top').addClass('active')
-       
+
       } else {
         // 显示蓝色
         $('.btn-top').removeClass('active')
@@ -109,22 +109,25 @@ function loadHeader(index) {
     $(".nav-right li:eq(" + index + ")").addClass('active')
 
     /*选中*/
-    var li_con_width =$('.nav-right li:eq('+index+')').width();
-    var li_width = $('.nav-right li:eq('+index+')').outerWidth();
-    var li_pad_width =( li_width - li_con_width) /2 
-    var li_index =$('.nav-right li:eq('+index+')').index();
+    var li_con_width = $('.nav-right li:eq(' + index + ')').width();
+    var li_width = $('.nav-right li:eq(' + index + ')').outerWidth();
+    var li_pad_width = (li_width - li_con_width) / 2
+    var li_index = $('.nav-right li:eq(' + index + ')').index();
     var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
     var left = 0;
-    if( li_index > 0){
-      left =  li_width * (li_index-1) + li_index0_width + li_pad_width
+    if (li_index > 0) {
+      left = li_width * (li_index - 1) + li_index0_width + li_pad_width
     }
-    $('.nav-line').css({'left':left})
-
+    $("#_header").on("mouseout", ".nav-right li", function () {
+      $('.nav-line').css({ 'left': left })
+    });
+    $('.nav-line').css({ 'left': left })
   });
+
 }
 
 function setSilder(index, subIndex) {
-  if (subIndex>=0) {
+  if (subIndex >= 0) {
     $('.slider-list li:eq(' + index + ') ').find('dl dd:eq(' + subIndex + ')').addClass('cur')
   }
   $('.slider-list li:eq(' + index + ') ').addClass('active')
