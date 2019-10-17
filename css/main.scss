@@ -1007,7 +1007,15 @@ footer {
 }
 
 @media (max-width:1200px) {
+  .header{ height: 100px;}
+  .header nav ul{ height: 99px;}
+  .header nav ul li{ height: 99px;}
   .ganyu-item .item-padding270{ padding-left: 0;}
+  #_about .about-desc, #_menber .about-desc{ padding-bottom: 20px;}
+  #_menber .menber-flex li{ padding: 3px 0;}
+  #_menber .cn{ white-space: nowrap; font-size: 16px;}
+  #_about .flex-about, #_menber .flex-about{ margin-bottom: 30px;}
+  #_item .item-title{ font-size: 23px;}
   .new-list1{
     li{ margin-top: 30px;}
     .new-img{ width: 43.6%; background: #eee;}
