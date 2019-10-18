@@ -63,20 +63,6 @@ $(function () {
       }
     });
 
-    /** pc hover */
-    $("#_header").on("mouseenter", ".nav-right li", function () {
-      var li_con_width = $(this).width();
-      var li_width = $(this).outerWidth();
-      var li_pad_width = (li_width - li_con_width) / 2
-      var li_index = $(this).index();
-      var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
-      var left = 0;
-      if (li_index > 0) {
-        left = li_width * (li_index - 1) + li_index0_width + li_pad_width
-      }
-      $('.nav-line').css({ 'left': left })
-    });
-
     $(window).scroll(function () {
       //创建一个变量存储当前窗口下移的高度
       var scroTop = $(window).scrollTop();
@@ -106,24 +92,32 @@ function loadHeader(index) {
   $('#_header').load("header.html", "", function (response, status, request) {
     $('#_header').html(response);
     $('.nav-line').attr('class', 'nav-line line' + index + '')
-    $(".nav-right li:eq(" + index + ")").addClass('active')
-
-    /*选中*/
-    var li_con_width = $('.nav-right li:eq(' + index + ')').width();
-    var li_width = $('.nav-right li:eq(' + index + ')').outerWidth();
-    var li_pad_width = (li_width - li_con_width) / 2
-    var li_index = $('.nav-right li:eq(' + index + ')').index();
-    var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
+    // $(".nav-right li:eq(" + index + ")").addClass('active')
     var left = 0;
-    if (li_index > 0) {
-      left = li_width * (li_index - 1) + li_index0_width + li_pad_width
+    var li_con_width =  $('.nav-right li:eq(1)').width();
+    var li_width =  $('.nav-right li:eq(1)').outerWidth();
+    var li_pad_width = (li_width - li_con_width)  /2 
+    var li_index0_width = $('.nav-right li:eq(0)').outerWidth()
+    if (index > 0) {
+      left = li_width * (index - 1) + li_index0_width + li_pad_width
     }
-    $("#_header").on("mouseout", ".nav-right li", function () {
-      $('.nav-line').css({ 'left': left })
-    });
     $('.nav-line').css({ 'left': left })
-  });
 
+    /** */
+    $('.nav-right li').hover(function () {
+      // over
+      var li_index = $(this).index();
+      if (li_index > 0) {
+        left = li_width * (li_index - 1) + li_index0_width + li_pad_width
+      }
+      $('.nav-line').css({ 'left': left })
+    }, function () {
+      // out
+      left = li_width * (index - 1) + li_index0_width + li_pad_width
+      $('.nav-line').css({ 'left': left })
+    }
+  );
+  });
 }
 
 function setSilder(index, subIndex) {

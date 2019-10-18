@@ -156,6 +156,7 @@ img {
 }
 .section{ overflow: hidden;}
 /*header*/
+#_header{ height: 123px;}
 .header {
   position: fixed;
   left: 0;
@@ -210,7 +211,7 @@ img {
     white-space: nowrap;
   }
   nav{ position: relative;}
-  .nav-line{ position: absolute; width: calc(100% / 8 ); display: block; content: ''; left: 0; bottom: -1px;  height: 2px ; background: $colorb; transition: .2s linear all}
+  .nav-line{ position: absolute; width: calc(100% / 8 ); display: block; content: ''; left: 0; bottom: -1px;  height: 2px ; background: $colorb; transition: .2s linear all; min-width: 70px}
   // .nav-line.line0{ left: 0;}
   // .nav-line.line1{ left: calc(16.66% - 12px);}
   // .nav-line.line2{ left: calc(33.332% );}
@@ -246,6 +247,7 @@ img {
     li.active a{ font-weight: bold;}
   }
 }
+.header{background: rgba($color: #fff, $alpha: 0);}
 .header:hover,
 .header.active,.headactive .header {
   background: rgba($color: #fff, $alpha: 0.88);
@@ -1007,7 +1009,7 @@ footer {
 }
 
 @media (max-width:1200px) {
-  .header{ height: 100px;}
+  .header,#_header{ height: 100px;}
   .header nav ul{ height: 99px;}
   .header nav ul li{ height: 99px;}
   .ganyu-item .item-padding270{ padding-left: 0;}
