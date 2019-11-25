@@ -29,6 +29,26 @@
     <div class="head" id='_header'></div>
 
     <!--container-->
+    <style>
+    @media (max-width: 767px){
+        .banner{ height: 100vh;}
+        #_about .flex-about li, #_menber .flex-about li{ width: 47%}
+        .about-video-text{ margin-top: 15px}
+        #_about .swiper-slide, #_menber .swiper-slide{ padding-right: 0}
+        #_about .about-video-bg, #_menber .about-video-bg { left: -2%; width: 102%; display: none }
+        #_about .play-icon, #_menber .play-icon{ top: 24%}
+        .about-video-text{ border-left: 10px solid #b99f84; border-bottom: 10px solid #b99f84}
+        #_menber .menber-bg{padding-top: 0}
+        #_news .new-desc{ padding: 10px 10px 20px 10px}
+        #_menber .menber-img{ background-position: center bottom  !important; height: 40vh !important; background-size:  cover !important}
+        #_item{ height: 100vh;}
+        #_item .item{ opacity: 1; }
+        #_item .paddingt65{ padding-top: 30px}
+        #_menber{ margin-top: 20px}
+        #_menber .cn{ font-size: 12px}
+        .about-ani.padding120{ padding-top: 30px}
+    }
+    </style>
     <div id="fullpage">
         <!-- banner -->
         <div class="section   " id="_banner">
@@ -62,37 +82,37 @@
                         </div>
                     </div>
                     <div class="swiper-slide ">
-                      
-                        <div class="hidden-xs wh100"
+
+                        <div class=" wh100"
                             style='background:url(images/banner2.jpg) no-repeat center; background-size: cover;'>
                             <div class="container positionr h100 flex  banner-txt">
                             </div>
                         </div>
 
-                       
+
                         <div class="visible-xs wh100"
                             style='background:url(images/banner2p.jpg) no-repeat center; background-size: cover;'>
                             <div class="container positionr h100 flex  banner-txt">
-                                
+
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide ">
-                      
-                            <div class="hidden-xs wh100"
-                                style='background:url(images/banner3.jpg) no-repeat center; background-size: cover;'>
-                                <div class="container positionr h100 flex  banner-txt">
-                                </div>
-                            </div>
-    
-                           
-                            <div class="visible-xs wh100"
-                                style='background:url(images/banner3p.jpg) no-repeat center; background-size: cover;'>
-                                <div class="container positionr h100 flex  banner-txt">
-                                    
-                                </div>
+
+                        <div class="hidden-xs wh100"
+                            style='background:url(images/banner3.jpg) no-repeat center; background-size: cover;'>
+                            <div class="container positionr h100 flex  banner-txt">
                             </div>
                         </div>
+
+
+                        <div class="visible-xs wh100"
+                            style='background:url(images/banner3p.jpg) no-repeat center; background-size: cover;'>
+                            <div class="container positionr h100 flex  banner-txt">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn-next-prev   banner-arrow  container">
                     <span> <a href="javascript:void(0)" class="new-right new-left" id="banner_prev">→</a></span>
@@ -119,7 +139,7 @@
                             工作室 合作开展产学研项目研究，积极探索高品质世界级健康管理服务新模式，
                             推动生命健 康管理领域相关理论与实践的创新发展。
                         </div>
-                        <ul class="flex flex-about hidden-xs">
+                        <ul class="flex flex-about ">
                             <li>
                                 <p class="about-num-item"><img src="images/about-1.png" alt="" srcset=""></p>
                                 <p class="about-desc1">坐拥“岭南第一泉”之
@@ -148,22 +168,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="w50 about-video hidden-xs">
+                <div class="w50 about-video ">
                     <div class=" positionr">
                         <img src="images/index-about-img.jpg" alt="" srcset="" class="visible-hidden">
-                        <div class="about-video-bg hidden-xs">
+                        <div class="about-video-bg ">
                         </div>
                         <div class="positionb">
                             <img src="images/index-about-img.jpg" alt="" srcset="" id="play_video">
                             <!-- <video class="index-video" autoplay="autoplay" controls src=""
                                 poster="images/index-about-img.jpg" /> -->
                         </div>
-                        <div class="about-video-text  hidden-xs">
+                        <div class="about-video-text  ">
                             <div class="swiper-container video-desc-box">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide fon15">
                                         <p class=" text-left">“从都国际生命健康管理中心世界一流的技术、世界一流的服务都令我印象深刻。”</p>
-                                        <p class="text-right" ><b>——联合国前秘书长潘基文</b></p>
+                                        <p class="text-right"><b>——联合国前秘书长潘基文</b></p>
                                         <hr class="hr">
                                         <div>
                                             <p>“这里的一切是如此的引人入胜，所有的设施都是极美的，这里的科技也是世界
@@ -221,7 +241,7 @@
 
         <!-- menber -->
         <div class="section flex" id="_menber">
-            <div class="w50 positionr h100 hv100 hidden-xs menber-img"
+            <div class="w50 positionr h100 hv100 menber-img"
                 style="background: url(images/index-menber.jpg) no-repeat center">
 
             </div>
@@ -409,40 +429,90 @@
         <!-- end news -->
 
         <!--star  footer -->
-        <div class="section"  id="_footer">
-            <footer class="footers footer"  id="footer"></footer>
+        <div class="section" id="_footer">
+            <footer class="footers footer" id="footer"></footer>
         </div>
         <!--end  footer -->
     </div>
     <div class="video-master animated slideInRight flex flex-center">
-        <img src="images/btn-close.png" alt="" srcset="" class="close-btn" >
-        <video
-          class="animated flipInX video"
-         
-          controls
-          src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-          poster="images/index-about-img.jpg" id="video"
-        />
+        <img src="images/btn-close.png" alt="" srcset="" class="close-btn">
+        <video class="animated flipInX video" controls
+            src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+            poster="images/index-about-img.jpg" id="video" />
     </div>
-      <div class="index-top"></div>
+    <div class="index-top"></div>
 
     <script type="text/javascript">
+        function IsPC() {
+           if($(window).width()>767){
+               return true
+           }else{
+               return false
+           }
+        };
+
         $(function () {
             loadHeader(0)
-            var myFullpage = new fullpage('#fullpage', {
-                fixedElements: '#_header',
-                verticalCentered: false,//设置内容不垂直居中
-                anchors: ['banner', 'about', 'item', 'menber', 'news','footers'],
-                sectionsColor: ['#68b5fc', '#fff', '#fff', 'f5bdbd', 'f5b8b4','#0a5281'],
-                scrollBar: false,
-                navigation: true,//是否显示导航，默认为false
-                normalScrollElements: '.video-desc-box',//避免自动滚动，滚动时的一些元素，例如百度地图
-                scrollOverflow: false,//内容超过满屏后是否显示滚动条，true则显示滚动条，若需滚动查看内容还需要jquery.slimscroll插件的配合
-                afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-                },
-                // css3:false,
-                easing: 'easeInOutCubic',
-                afterRender: function () {
+
+            $(document).ready(function () {
+                var isPC = IsPC();
+                if (isPC) {
+                    //这里执行的是PC端的代码；
+                    var myFullpage = new fullpage('#fullpage', {
+                        fixedElements: '#_header',
+                        verticalCentered: false,//设置内容不垂直居中
+                        anchors: ['banner', 'about', 'item', 'menber', 'news', 'footers'],
+                        sectionsColor: ['#68b5fc', '#fff', '#fff', 'f5bdbd', 'f5b8b4', '#0a5281'],
+                        scrollBar: false,
+                        navigation: true,//是否显示导航，默认为false
+                        normalScrollElements: '.video-desc-box',//避免自动滚动，滚动时的一些元素，例如百度地图
+                        scrollOverflow: false,//内容超过满屏后是否显示滚动条，true则显示滚动条，若需滚动查看内容还需要jquery.slimscroll插件的配合
+                        afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                        },
+                        // css3:false,
+                        easing: 'easeInOutCubic',
+                        afterRender: function () {
+                            var swiper = new Swiper('.banner', {
+                                autoplay: true,
+                                loop: true,
+                                pagination: {
+                                    el: '.swiper-pagination-banner',
+                                    // type: 'fraction',
+                                    clickable: true
+                                },
+                                navigation: {
+                                    nextEl: '#banner_next',
+                                    prevEl: '#banner_prev',
+                                },
+                            });
+                            var swiper_about = new Swiper('.video-desc-box', {
+                                direction: 'vertical',
+                                slidesPerView: 'auto',
+                                freeMode: true,
+                                scrollbar: {
+                                    el: '.swiper-scrollbar',
+                                },
+                                mousewheel: true,
+                            });
+
+                        },
+                        afterLoad: function (anchorLink, section) {
+                            if (section.index >= 1) {
+                                $('#header').addClass('active')
+                            } else {
+                                $('#header').removeClass('active')
+                            }
+                            if (section.index == 5) {
+                                $('.index-top').fadeIn()
+                            } else {
+                                $('.index-top').fadeOut()
+                            }
+                        },
+                    });
+
+                }
+                else {
+                    //这里执行的是移动端的代码；
                     var swiper = new Swiper('.banner', {
                         autoplay: true,
                         loop: true,
@@ -465,20 +535,10 @@
                         },
                         mousewheel: true,
                     });
-                },
-                afterLoad: function (anchorLink, section) {
-                    if (section.index >= 1) {
-                        $('#header').addClass('active')
-                    } else {
-                        $('#header').removeClass('active')
-                    }
-                    if(section.index == 5){
-                        $('.index-top').fadeIn()
-                    }else{
-                        $('.index-top').fadeOut()
-                    }
-                },
+
+                }
             });
+
             var swiper_news = new Swiper('.news-box', {
                 slidesPerView: 3,
                 spaceBetween: 25,
@@ -495,45 +555,49 @@
                 breakpoints: {
                     640: {
                         slidesPerView: 1,
-                        spaceBetween: 20,
+                        spaceBetween: 30,
                     },
                     768: {
                         slidesPerView: 2,
-                        spaceBetween: 20,
+                        spaceBetween: 30,
                     },
                     1024: {
                         slidesPerView: 3,
-                        spaceBetween: 20,
+                        spaceBetween: 30,
                     },
                 }
             });
-           
+
             var video = document.getElementById('video')
-           $('.play-icon').click(function (e) { 
-               e.preventDefault();
-               $('.video-master').css('display','flex')
-               video.play();
-               
-           });
-            $('.close-btn').click(function (e) { 
+            $('.play-icon').click(function (e) {
                 e.preventDefault();
-                $('.video-master').css('display','none')
+                $('.video-master').css('display', 'flex')
+                video.play();
+
+            });
+            $('.close-btn').click(function (e) {
+                e.preventDefault();
+                $('.video-master').css('display', 'none')
                 video.pause();
             });
-         
-            $('.index-top').click(function (e) { 
+
+            $('.index-top').click(function (e) {
                 console.log('aa')
                 // myFullpage.moveTo(6,0);//从1开始，slide从0开始
                 myFullpage.moveTo(1);
                 console.log('bb')
             });
             // myFullpage.moveTo(5)
-        
-        
+
+            $(window).resize(function () { 
+                window.location.reload()
+            });
+
+
         });
 
     </script>
-     
+
 
     <!--end container-->
 
